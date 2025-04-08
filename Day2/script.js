@@ -48,3 +48,25 @@ const r = 30;
 let person = { name: "Bob", age: 30 };   // Object
 let scores = [90, 85, 88];               // Array
 function greet() { console.log("Hi"); }  // Function
+
+// for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+// Output: 0 1 2 3 4
+
+// while loop
+let j = 0;
+while (j < 5) {
+    console.log(i);
+    j++;
+}
+// Output: 0 1 2 3 4
+
+// do ... while loop
+let k = 0;
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
+// Output: 0 1 2 3 4
