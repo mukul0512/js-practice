@@ -38,12 +38,12 @@ console.log(p); // undefined
 var p = 10;
 
 // using let
-console.log(q); // ReferenceError: Cannot access 'q' before initialization
-let q = 20;
+// console.log(q); // ReferenceError: Cannot access 'q' before initialization
+// let q = 20;
 
 // using const
-console.log(r); // ReferenceError
-const r = 30;
+// console.log(r); // ReferenceError
+// const r = 30;
 
 let person = { name: "Bob", age: 30 };   // Object
 let scores = [90, 85, 88];               // Array
@@ -58,7 +58,7 @@ for (let i = 0; i < 5; i++) {
 // while loop
 let j = 0;
 while (j < 5) {
-    console.log(i);
+    console.log(j);
     j++;
 }
 // Output: 0 1 2 3 4
@@ -109,3 +109,27 @@ for (let [key, value] of userMap) { // Looping through a Map
 // Output:
 // name: John
 // age: 30
+
+// for ...in loop
+let person1 = {
+    name: "Alice",
+    age: 25,
+    city: "New York"
+};
+
+for (let key in person1) { // Looping through an object
+    console.log(key, person1[key]);
+}
+// Output:
+// name Alice
+// age 25
+// city New York
+
+let fruitsName = ["apple", "banana", "cherry"];
+for (let index in fruitsName) { // Looping through an array (not recommended)
+    console.log(index, fruitsName[index]);
+}
+// Output:
+// 0 apple
+// 1 banana
+// 2 cherry
