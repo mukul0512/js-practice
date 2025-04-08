@@ -70,3 +70,42 @@ do {
     k++;
 } while (k < 5);
 // Output: 0 1 2 3 4
+
+// for...of Loop (ES6+)
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) {  //  Looping through an array
+    console.log(fruit);
+}
+// Output:
+// apple
+// banana
+// cherry
+
+let name = "Alice";
+for (let char of name) { //  Looping through a string
+    console.log(char);
+}
+// Output:
+// A
+// l
+// i
+// c
+// e
+
+let uniqueNums = new Set([1, 2, 3]);
+
+for (let num of uniqueNums) { // Looping through a Set
+    console.log(num);
+}
+// Output: 1 2 3
+let userMap = new Map([
+    ["name", "John"],
+    ["age", 30],
+]);
+
+for (let [key, value] of userMap) { // Looping through a Map
+    console.log(`${key}: ${value}`);  // template literals
+}
+// Output:
+// name: John
+// age: 30
