@@ -45,3 +45,6 @@ let q = 20;
 console.log(r); // ReferenceError
 const r = 30;
 
+let person = { name: "Bob", age: 30 };   // Object
+let scores = [90, 85, 88];               // Array
+function greet() { console.log("Hi"); }  // Function
