@@ -6,22 +6,21 @@
 // 1 2 3 4
 // 1 2 3 4 5
 
-// const TrianglePattern1 = () => {
-//     let n = 5;
-//     let pattern = "";
-//     for (let i = 1; i <= n; i++) {
-//         for (let j = 1; j <= i; j++) {
-//             pattern = pattern + j + " ";
-//         }
-//         pattern = pattern + "\n";
-//     }
-//     console.log(pattern);
-// }
+const TrianglePattern1 = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern = pattern + j + " ";
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
 
-// TrianglePattern1(5);
+TrianglePattern1(5);
 
 // -------------------------------------------------------------------------------------
-// Triangle Pattern — II
+// 2. Triangle Pattern — II
 
 // 1
 // 2 2
@@ -29,33 +28,58 @@
 // 4 4 4 4
 // 5 5 5 5 5
 
-// let n = 5;
-// let pattern = "";
-// for (let i = 1; i <= n; i++) {
-//     for (let j = 1; j <= i; j++) {
-//         pattern = pattern + i + " ";
-//     }
-//     pattern = pattern + "\n";
-// }
-// console.log(pattern);
+const TrianglePattern2 = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern = pattern + i + " ";
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+TrianglePattern2(5);
 
 // -------------------------------------------------------------------------------------
-// Triangle Pattern — III
+// 3. Triangle Pattern — III
 
 // 1
 // 2 3
 // 4 5 6
 // 7 8 9 10
 
-let n = 4;
-let variable = 1;
-let pattern = "";
+const TrianglePattern3 = (n) => {
+    let variable = 1;
+    let pattern = "";
 
-for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= i; j++) {
-        pattern = pattern + variable + " ";
-        variable++;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern = pattern + variable + " ";
+            variable++;
+        }
+        pattern = pattern + "\n";
     }
-    pattern = pattern + "\n";
+    console.log(pattern);
 }
-console.log(pattern);
+TrianglePattern3(4);
+
+// -------------------------------------------------------------------------------------
+// 4. Reverse Triangle — I
+
+// 12345
+// 1234
+// 123
+// 12
+// 1
+
+const ReverseTriangle1 = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n + 1 - i; j++) {
+            pattern = pattern + j;
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+ReverseTriangle1(5);
