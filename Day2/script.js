@@ -24,3 +24,10 @@ function sayHi() {
     console.log("Hello!");
 }
 greet();
+
+// Stack overflow
+function boom() {
+    boom(); // infinite recursion
+}
+
+boom(); // Maximum call stack size exceeded
