@@ -26,8 +26,22 @@ function sayHi() {
 greet();
 
 // Stack overflow
-function boom() {
-    boom(); // infinite recursion
-}
+// function boom() {
+//     boom(); // infinite recursion
+// }
 
-boom(); // Maximum call stack size exceeded
+// boom(); // RangeError: Maximum call stack size exceeded
+
+// Variable and Hoisting
+// using var
+console.log(p); // undefined
+var p = 10;
+
+// using let
+console.log(q); // ReferenceError: Cannot access 'q' before initialization
+let q = 20;
+
+// using const
+console.log(r); // ReferenceError
+const r = 30;
+
