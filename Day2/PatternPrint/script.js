@@ -83,3 +83,56 @@ const ReverseTriangle1 = (n) => {
     console.log(pattern);
 }
 ReverseTriangle1(5);
+
+// -------------------------------------------------------------------------------------
+// 5. Number Pyramid Pattern — I
+/*
+    1
+   123
+  12345
+ 1234567
+123456789
+
+*/
+
+const NumberPyramidPattern1 = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let space = 1; space <= n - i; space++) {
+            pattern = pattern + " ";
+        }
+        for (let j = 1; j <= 2 * i - 1; j++) {
+            pattern = pattern + j;
+        }
+
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+NumberPyramidPattern1(5)
+
+// -------------------------------------------------------------------------------------
+// 6. Number Pyramid Pattern — II
+/*
+  1
+ 234
+56789
+
+*/
+
+const NumberPyramidPattern2 = (n) => {
+    let variable = 1;
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let space = 1; space <= n - i; space++) {
+            pattern += " ";
+        }
+        for (let j = 1; j <= 2 * i - 1; j++) {
+            pattern = pattern + variable;
+            variable++;
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+NumberPyramidPattern2(3);
