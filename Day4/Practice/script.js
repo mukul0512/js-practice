@@ -60,3 +60,58 @@
 // console.log(o);
 
 // ----------------------------------------------------------------
+
+// if, else if, else ladder
+// let age = 18;
+// let grace = 2;
+// age = age + grace;
+// console.log(age); // 5
+// console.log(age - grace);
+// console.log(age * grace);
+// console.log(age / grace);
+// console.log(age % grace);
+// console.log(age ** grace); // exponential operator it print 9
+
+// if (age == 18) {
+//     console.log("You can drive");
+// } else {
+//     console.log("You can't drive");
+// }
+// ------------------------------------------------------------------------------
+// if ("3" == 3) { // true because it check for value only
+//     console.log("yes");
+// }
+// else {
+//     console.log("No");
+// }
+
+// if ("3" === 3) { // false because it check for both value and type as well
+//     console.log("yse");
+// }
+// else {
+//     console.log("No");
+// }
+
+// ---------------------------------------------------------------------------------
+// if else if else ladder
+// let age = 1;
+// if (age == 18) {
+//     console.log("You can drive");
+// } else if (age == 0) {
+//     console.log("Are you kidding?");
+// } else if (age == 1) {
+//     console.log("Are you again kidding?");
+// }
+// else {
+//     console.log("You can't drive");
+// }
+
+// -------------------------------------------------------------
+// ternary operator
+// let a = 6;
+// let b = 8;
+// let c = a > b ? (a - b) : (b - a);
+// console.log(c); // 2
+
+// -------------------------------------------------------------------------
+
