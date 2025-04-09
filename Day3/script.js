@@ -152,6 +152,21 @@ function factorial(n) {
 let result = factorial(5);
 console.log("Factorial of 5 is:", result);
 
+// Recursion - Fibonacci
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+function printFibonacciSeries(count) {
+    for (let i = 0; i < count; i++) {
+        console.log(fibonacci(i));
+    }
+}
+printFibonacciSeries(10);
+
 // loop to iterate over an object’s keys and values using template literal we can access key and value.
 const person = {
     name: "Alice",
