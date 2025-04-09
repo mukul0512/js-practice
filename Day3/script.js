@@ -179,4 +179,3 @@ for (let key in person) {
         console.log(`Key: ${key}, Value: ${person[key]}`); // template literal
     }
 }
-
