@@ -108,3 +108,60 @@
 //   console.log(arr);
 
 // -------------------------------------------------------------------
+
+let a;
+console.log(a); // undefined
+
+let obj = {};
+console.log(obj.name); // undefined
+
+let b = null;
+console.log(b); // null
+
+// call by value
+function changeValue(x) {
+    x = x + 10;
+    console.log("Inside function:", x);
+}
+
+let num = 5;
+changeValue(num);
+
+console.log("Outside function:", num); // Still 5
+
+// call by reference
+function updatePerson(person) {
+    person.age = 30;
+    console.log("Inside function:", person);
+}
+
+let user = { name: "Alice", age: 25 };
+updatePerson(user);
+
+console.log("Outside function:", user); // age is now 30
+
+// Recursion - Factorial 
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+let result = factorial(5);
+console.log("Factorial of 5 is:", result);
+
+// loop to iterate over an object’s keys and values using template literal we can access key and value.
+const person = {
+    name: "Alice",
+    age: 28,
+    city: "Paris"
+};
+
+for (let key in person) {
+    if (person.hasOwnProperty(key)) {
+        console.log(`Key: ${key}, Value: ${person[key]}`); // template literal
+    }
+}
+
