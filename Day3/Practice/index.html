@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <h1>Functions and Control Structures</h1>
+
+    <h2>Function Declaration</h2>
+    <p>A function declaration defines a named function using the <code>function</code> keyword.</p>
+    <pre><code>function greet(name) {
+      return "Hello, " + name;
+    }</code></pre>
+
+    <h2>Function Parameters</h2>
+    <p>Functions can accept inputs called parameters to make them more dynamic.</p>
+    <pre><code>function multiply(a, b) {
+      return a * b;
+    }</code></pre>
+
+    <h2>Function Return Value</h2>
+    <p>Functions can return values using the <code>return</code> statement.</p>
+    <pre><code>function square(n) {
+      return n * n;
+    }</code></pre>
+
+    <h2>Function Expressions</h2>
+    <p>A function expression defines a function inside an expression and can be anonymous or named.</p>
+    <pre><code>const greet = function(name) {
+      return "Hello, " + name;
+    };</code></pre>
+
+    <h2>Arrow Function</h2>
+    <p>Arrow functions provide a shorter syntax and lexically bind the <code>this</code> value.</p>
+    <pre><code>const add = (a, b) => a + b;</code></pre>
+
+    <h2>Anonymous Function</h2>
+    <p>An anonymous function is a function without a name, often used as a callback or in expressions.</p>
+    <pre><code>setTimeout(function() {
+      console.log("Hello after 1 second");
+    }, 1000);</code></pre>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
