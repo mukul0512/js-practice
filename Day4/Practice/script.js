@@ -204,7 +204,7 @@
 // ---------------------------------------------------------------------
 
 // Faulty Calculator
-/* 
+/*
 
 Create a faulty calculator using js
 This faulty calculator does following:
@@ -222,26 +222,67 @@ a = Math.random() < 0.1
 
 */
 
-let random = Math.random();
-console.log(random);
-let a = prompt("Enter first number");
-let b = prompt("Enter Operation");
-let c = prompt("Enter second number");
+// let random = Math.random();
+// console.log(random);
+// let a = prompt("Enter first number");
+// let b = prompt("Enter Operation");
+// let c = prompt("Enter second number");
 
-let obj = {
-    "+": "-",
-    "*": "+",
-    "-": "/",
-    "/": "**"
-}
-if (random > 0.1) {
-    // Perform correct calculation
-    // using eval() and access using template literal
-    console.log(`Operation perform ${a} ${b} ${c}`);
-    alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
-}
-else {
-    // Perform wrong calculation
-    c = obj[c]
-    alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
-}
+// let obj = {
+//     "+": "-",
+//     "*": "+",
+//     "-": "/",
+//     "/": "**"
+// }
+// if (random > 0.1) {
+//     // Perform correct calculation
+//     // using eval() and access using template literal
+//     console.log(`Operation perform ${a} ${b} ${c}`);
+//     alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
+// }
+// else {
+//     // Perform wrong calculation
+//     c = obj[c]
+//     alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
+// }
+// ----------------------------------------------------------------------
+
+// Strings
+// let a = "Mukul";
+// console.log(a[0]);
+// console.log(a[1]);
+// console.log(a[2]);
+// console.log(a[3]);
+// console.log(a[4]);
+// console.log(a[5]);
+// console.log(a.length);
+
+// // Template literal - applied in string
+// let real_name = "Mukul";
+// let friend = "Rajan";
+// console.log("His name is " + real_name + " and his friends is " + friend);
+// console.log(`His name is ${real_name} and his friends is ${friend}`);
+
+// --------------------------------------------------------------------------------
+// Strings properties and methods
+// let b = "Mukul";
+// let a = " Vipul";
+// console.log(b.toUpperCase());
+// console.log(b.toLowerCase());
+// console.log(b.slice(1, 3));
+// console.log(b.slice(1));
+// console.log(b.split());
+// console.log(b.length);
+// console.log(b.replace("M", "V"));
+// console.log(b.concat(a, " Karnwal"));
+// console.log(b.charAt(0));
+// console.log(b.indexOf("ku"));
+// console.log(b.indexOf("V"));
+// console.log(b.endsWith("ul"));
+// console.log(b.startsWith("Mu"));
+// console.log(b.startsWith("pul"));
+// // Strings are immutable
+// console.log(a);
+// console.log(b);
+
+// ------------------------------------------------------------
