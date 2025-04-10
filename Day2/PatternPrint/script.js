@@ -161,3 +161,37 @@ const SquareStarPattern1 = (n) => {
     console.log(pattern);
 }
 SquareStarPattern1(5)
+
+// -------------------------------------------------------------------
+
+// 8. Hollow Square Star Pattern
+/*
+
+*****
+*   *
+*   *
+*   *
+*****
+
+*/
+
+const HollowSquareStarPatter = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (i == 1 || i == n) {
+                pattern = pattern + "*";
+            }
+            else {
+                if (j == 1 || j == 5) {
+                    pattern += "*";
+                } else {
+                    pattern += " ";
+                }
+            }
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+HollowSquareStarPatter(5);
