@@ -335,3 +335,27 @@ const HollowTriangleStar = (n) => {
     console.log(pattern);
 }
 HollowTriangleStar(5);
+
+// -----------------------------------------------------------------------
+
+// 14. Downward Triangle Star Pattern
+/*
+
+*****
+****
+***
+**
+*
+
+*/
+const DownwardTriangleStarPattern = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n + 1 - i; j++) {
+            pattern = pattern + "*";
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+DownwardTriangleStarPattern(5);
