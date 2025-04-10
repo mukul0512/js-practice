@@ -183,7 +183,7 @@ const HollowSquareStarPatter = (n) => {
                 pattern = pattern + "*";
             }
             else {
-                if (j == 1 || j == 5) {
+                if (j == 1 || j == n) {
                     pattern += "*";
                 } else {
                     pattern += " ";
