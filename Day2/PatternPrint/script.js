@@ -448,3 +448,43 @@ const InverseTrianglePyramid1 = (n) => {
     console.log(pattern);
 }
 InverseTrianglePyramid1(5);
+
+// --------------------------------------------------------------------
+
+// 18. Inverse Triangle Pyramid — II 
+/*
+
+AAAAA
+AAAA
+AAA
+AA
+A
+
+B
+BB
+BBB
+BBBB
+BBBBB
+
+*/
+
+const InverseTrianglePyramid2 = (n) => {
+    let char1 = "A";
+    let char2 = "B";
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n + 1 - i; j++) {
+            pattern = pattern + char1;
+        }
+        pattern = pattern + "\n";
+    }
+    pattern = pattern + "\n";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern = pattern + char2;
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+InverseTrianglePyramid2(5);
