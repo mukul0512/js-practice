@@ -67,6 +67,48 @@
 
 // -------------------------------------------------------------------------------------------
 
+// code of today class
+class User {
+    constructor(name, address) {
+        this.name = name,
+            this.address = address
+    }
+}
+
+const user1 = new User("Sita", "delhi");
+const user2 = new User("Shyam", "rampur");
+
+getDetails.call(user2);
+
+
+function printName() {
+    console.log(this.name);
+}
+function getDetails() {
+    console.log(`user details : ${this.name} ${this.address} `)
+}
+const obj = {
+    name: "Ram",
+    address: "axyz",
+    getDetails: function () {
+        console.log(this)
+        console.log(this.name + " " + this.address);
+    }
+}
+
+const obj2 = {
+    name: "Ram",
+    address: "India",
+}
+const obj3 = {
+    name: "Ram",
+    address: "goa",
+}
+
+// getDetails.call(obj3)
+// obj.getDetails.call(obj2);
+// printName.call(obj);
+
 /*
     Difference between break, continue and return
     How many types of loops - entry control vs exit control loop
@@ -83,12 +125,13 @@
 // }
 
 // 2. continue - Skips the rest of the current loop iteration and moves to the next one.
-// for (let i = 0; i < 5; i++) {
-//     if (i === 3) {
-//         continue;
-//     }
-//     console.log(i);
-// }
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+    console.log("Hello world");
+}
 
 // 3. return - Exits a function completely and optionally returns a value.
 // function findNumber() {
