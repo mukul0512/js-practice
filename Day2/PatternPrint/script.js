@@ -136,3 +136,28 @@ const NumberPyramidPattern2 = (n) => {
     console.log(pattern);
 }
 NumberPyramidPattern2(3);
+
+// ----------------------------------------------------------------------------
+
+// 7. Square Star Pattern — I
+/*
+
+*****
+*****
+*****
+*****
+*****
+
+ */
+
+const SquareStarPattern1 = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= 5; j++) {
+            pattern = pattern + "*";
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+SquareStarPattern1(5)
