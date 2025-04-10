@@ -75,8 +75,8 @@ console.log(p);
 
 // Call by reference
 
-let obj1 = { name: "Bob" };
+let obj1 = { name: "Karnwal" };
 let obj2 = obj1; // because holds same memory
-obj2.name = "Alice";
+obj2.name = "Mukul";
 console.log(obj1);
 console.log(obj2);
