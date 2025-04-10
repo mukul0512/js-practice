@@ -223,3 +223,59 @@ const RightTrianglePattern = (n) => {
     console.log(pattern);
 }
 RightTrianglePattern(5);
+
+// ----------------------------------------------------------------------
+
+// 10. Left Triangle Pattern
+/*
+
+*
+**
+***
+****
+*****
+
+*/
+
+const LeftTrianglePattern = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern = pattern + "*";
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+LeftTrianglePattern(5);
+
+// -----------------------------------------------------------------------------
+
+// 11. Pyramid Triangle Pattern
+/*
+
+    *
+   ***
+  *****
+ *******
+*********
+
+*/
+
+const PyramidTrianglePattern = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n - i; j++) {
+            pattern = pattern + " ";
+        }
+        for (let k = 1; k <= i; k++) {
+            pattern = pattern + "*";
+        }
+        for (let l = 1; l <= i - 1; l++) {
+            pattern = pattern + "*";
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+PyramidTrianglePattern(5);
