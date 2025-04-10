@@ -359,3 +359,29 @@ const DownwardTriangleStarPattern = (n) => {
     console.log(pattern);
 }
 DownwardTriangleStarPattern(5);
+
+// -----------------------------------------------------------------------
+
+// 15. Triangle Pattern
+/*
+
+A
+AA
+AAA
+AAAA
+AAAAA
+
+*/
+
+const TrianglePattern = (n) => {
+    let pattern = "";
+    let char = "A";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern = pattern + char;
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+TrianglePattern(5);
