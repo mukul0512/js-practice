@@ -115,3 +115,53 @@
 
 // -------------------------------------------------------------------------
 
+// loops - 5 types in js
+// for, for in, for of, while, do - while loop
+
+// 1. for loop
+// let a = 1;
+// console.log(a);
+// console.log(a + 1);
+// console.log(a + 2);
+// let a = 1;
+// for (let i = 0; i < 100; i++) {
+//     console.log(a + i);
+// }
+
+// 2. for ...in loop - used for object
+// let obj = {
+//     name: "Mukul",
+//     role: "Programmer",
+//     company: "codingworkx"
+// }
+
+// for (const key in obj) {
+//     const element = obj[key];
+//     console.log(key, element);
+// }
+
+// 3. for ...of loop - used for array
+// for (const char of "Mukul") {
+//     console.log(char);
+// }
+
+// 4. while loop
+// let i = 5;
+// while (i < 6) {
+//     console.log(i);
+//     i++;
+// }
+// infinite loop is running when you don't put i++
+// let i = 5;
+// while (i < 6) {   // infinite loop
+//     console.log(i);
+// }
+
+// 5. de ...while loop
+// let i = 10;
+// do {
+//     console.log(i);
+//     i++;
+// } while (i < 6);
+
+// --------------------------------------------------------------------------
