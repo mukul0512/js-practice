@@ -194,9 +194,32 @@
 // console.log("The sum of these number is: ", result3);
 
 // Arrow function
-const func1 = (x) => {
-    console.log("I'm an arrow function", x);
-}
-func1(23);
-func1(43);
-func1(63);
+// const func1 = (x) => {
+//     console.log("I'm an arrow function", x);
+// }
+// func1(23);
+// func1(43);
+// func1(63);
+
+// ---------------------------------------------------------------------
+
+// Faulty Calculator
+/* 
+
+Create a faulty calculator using js
+This faulty calculator does following:
+1. It takes two numbers as an input from the user.
+2. It performs wrong operations as follows.
+
+    + ---> -
+    * ---> +
+    - ---> /
+    / ---> **
+
+Note - It performs wrong operation 10 % of the times.
+
+a = Math.random() < 0.1
+
+*/
+
+
