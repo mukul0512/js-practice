@@ -385,3 +385,30 @@ const TrianglePattern = (n) => {
     console.log(pattern);
 }
 TrianglePattern(5);
+
+// ----------------------------------------------------------------
+
+// 16. Reverse Triangle
+
+/*
+
+AAAAA
+AAAA
+AAA
+AA
+A
+
+*/
+
+const ReverseTriangle = (n) => {
+    let pattern = "";
+    let char = "A";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n + 1 - i; j++) {
+            pattern = pattern + char;
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+ReverseTriangle(5);
