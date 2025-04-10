@@ -165,3 +165,38 @@
 // } while (i < 6);
 
 // --------------------------------------------------------------------------
+
+// Functions
+// console.log("Hey Mukul you are nice!");
+// console.log("Hey Mukul you are good!");
+// console.log("Hey Mukul your t-shirt is nice");
+// console.log("Hey Mukul your code is admirable");
+
+// Normal function
+// function nice(name) {
+//     console.log("Hey " + name + " you are nice!");
+//     console.log("Hey " + name + " you are good!!");
+//     console.log("Hey " + name + " your t-shirt is nice");
+//     console.log("Hey " + name + " your code is admirable");
+// }
+// nice("Mukul");
+
+// function sum(a, b, c = 3) { // here c = 3 is the default parameter
+//     console.log(a, b, c); // 3 undefined 3 here the value of b is undefined
+//     return a + b + c;
+// }
+// result1 = sum(3); // NaN
+// result1 = sum(3, 5);
+// result2 = sum(7, 5);
+// result3 = sum(5, 11, 3);
+// console.log("The sum of these number is: ", result1);
+// console.log("The sum of these number is: ", result2);
+// console.log("The sum of these number is: ", result3);
+
+// Arrow function
+const func1 = (x) => {
+    console.log("I'm an arrow function", x);
+}
+func1(23);
+func1(43);
+func1(63);
