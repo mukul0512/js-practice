@@ -216,7 +216,7 @@ This faulty calculator does following:
     - ---> /
     / ---> **
 
-Note - It performs wrong operation 10 % of the times.
+Note - It performs wrong operation 10% of the times.
 
 a = Math.random() < 0.1
 
@@ -310,34 +310,60 @@ Hub
 
 */
 
-let rand = Math.random();
-let first, second, third;
-// 0 ... 0.33, 0.66, ... 1
-// Generating first Adjective word
-if (rand < 0.33) {
-    first = "Crazy";
-} else if (rand < 0.66 && rand >= 0.33) {
-    first = "Amazing";
-} else {
-    first = "Fire";
-}
+// let rand = Math.random();
+// let first, second, third;
+// // 0 ... 0.33, 0.66, ... 1
+// // Generating first Adjective word
+// if (rand < 0.33) {
+//     first = "Crazy";
+// } else if (rand < 0.66 && rand >= 0.33) {
+//     first = "Amazing";
+// } else {
+//     first = "Fire";
+// }
 
-// Generating second word of shop name
-if (rand < 0.33) {
-    second = "Engine";
-} else if (rand < 0.66 && rand >= 0.33) {
-    second = "Foods";
-} else {
-    second = "Garments";
-}
+// // Generating second word of shop name
+// if (rand < 0.33) {
+//     second = "Engine";
+// } else if (rand < 0.66 && rand >= 0.33) {
+//     second = "Foods";
+// } else {
+//     second = "Garments";
+// }
 
-// Generating third word of another word
-if (rand < 0.33) {
-    third = "Bros";
-} else if (rand < 0.66 && rand >= 0.33) {
-    third = "Limited";
-} else {
-    third = "Hub";
-}
+// // Generating third word of another word
+// if (rand < 0.33) {
+//     third = "Bros";
+// } else if (rand < 0.66 && rand >= 0.33) {
+//     third = "Limited";
+// } else {
+//     third = "Hub";
+// }
 
-console.log(`${first} ${second} ${third}`);
+// console.log(`${first} ${second} ${third}`);
+
+// ---------------------------------------------------------------------
+
+// Calculate the factorial
+// Write a program to calculate factorial of a number using reduce and using for loop
+
+let a = 5;
+const Factorial = (n) => {
+    let arr = Array.from(Array(n + 1).keys())
+    console.log(arr.slice(1,));
+    let c = arr.slice(1,).reduce((a, b) => {
+        return a * b;
+    })
+    return c;
+}
+console.log(Factorial(a));
+
+const factFor = (n) => {
+    let fac = 1;
+    for (let i = 1; i <= n; i++) {
+        fac = fac * i;
+    }
+    return fac;
+}
+console.log(factFor(a));
+
