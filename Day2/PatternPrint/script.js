@@ -279,3 +279,59 @@ const PyramidTrianglePattern = (n) => {
     console.log(pattern);
 }
 PyramidTrianglePattern(5);
+
+// ---------------------------------------------------------------------
+
+// 12. Reverse Triangle — I
+/*
+
+54321
+5432
+543
+54
+5
+
+*/
+
+const ReverseTriangleI = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = n; j >= i; j--) {
+            pattern = pattern + j;
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+ReverseTriangleI(5);
+
+// ------------------------------------------------------------------
+
+// 13. Hollow Triangle Star Pattern 
+/*
+
+*
+**
+* *
+*  *
+*   *
+******
+
+*/
+
+const HollowTriangleStar = (n) => {
+    let pattern = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (i == n || j == 1 || i == j) {
+                pattern = pattern + "*";
+            }
+            else {
+                pattern = pattern + " ";
+            }
+        }
+        pattern = pattern + "\n";
+    }
+    console.log(pattern);
+}
+HollowTriangleStar(5);
