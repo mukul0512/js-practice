@@ -286,3 +286,58 @@ a = Math.random() < 0.1
 // console.log(b);
 
 // ------------------------------------------------------------
+
+// Business Name Generator
+// Making a SAAS product (Software As A Service) ex- Canva
+// Create a business name generator by combining list of adjectives i.e. shop name and another word.
+// Note - without the use of arrays. You can use functions and strings or if ...else
+
+/*
+Adjectives:
+Crazy
+Amazing
+Fire
+
+Shop Name:
+Engine
+Foods
+Garments
+
+Another Word:
+Bros
+Limited
+Hub
+
+*/
+
+let rand = Math.random();
+let first, second, third;
+// 0 ... 0.33, 0.66, ... 1
+// Generating first Adjective word
+if (rand < 0.33) {
+    first = "Crazy";
+} else if (rand < 0.66 && rand >= 0.33) {
+    first = "Amazing";
+} else {
+    first = "Fire";
+}
+
+// Generating second word of shop name
+if (rand < 0.33) {
+    second = "Engine";
+} else if (rand < 0.66 && rand >= 0.33) {
+    second = "Foods";
+} else {
+    second = "Garments";
+}
+
+// Generating third word of another word
+if (rand < 0.33) {
+    third = "Bros";
+} else if (rand < 0.66 && rand >= 0.33) {
+    third = "Limited";
+} else {
+    third = "Hub";
+}
+
+console.log(`${first} ${second} ${third}`);
