@@ -47,6 +47,8 @@ for (let i = 0; i < 10; i++) {
     console.log(a);
 }
 console.log(name);
+console.log(y);
+
 
 console.log(typeof null)
 // --------------------------------------------------------------------------------
