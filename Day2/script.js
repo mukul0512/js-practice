@@ -1,31 +1,33 @@
 // Global Execution Context
 var x = 10;
-function greet() {
+console.log(x);
+function PrintHello() {
     console.log("Hello!");
 }
+PrintHello(x);
 
 // Function Execution Context
 function add(a, b) {
     var result = a + b;
     return result;
 }
-add(2, 3);
+console.log(add(2, 3));
 
 // Eval Execution Context
 eval("var x = 5;");
-console.log(x); // 5
+console.log(x);
 
 // Execution Stack
-function greet() {
+function PrintHi() {
     sayHi();
 }
 
 function sayHi() {
     console.log("Hello!");
 }
-greet();
+PrintHi();
 
-// Stack overflow
+// Stack overflow situation
 // function boom() {
 //     boom(); // infinite recursion
 // }
@@ -37,17 +39,19 @@ greet();
 console.log(p); // undefined
 var p = 10;
 
-// using let
+// but using let
 // console.log(q); // ReferenceError: Cannot access 'q' before initialization
 // let q = 20;
 
-// using const
-// console.log(r); // ReferenceError
+// similarly using const
+// console.log(r); // ReferenceError: Cannot access 'r' before initialization
 // const r = 30;
 
 let person = { name: "Bob", age: 30 };   // Object
 let scores = [90, 85, 88];               // Array
-function greet() { console.log("Hi"); }  // Function
+function printHi() {                    // Function
+    console.log("Hi");
+}
 
 // for loop
 for (let i = 0; i < 5; i++) {
@@ -71,7 +75,7 @@ do {
 } while (k < 5);
 // Output: 0 1 2 3 4
 
-// for...of Loop (ES6+)
+// for...of Loop (ES6+) --> Applied in array
 let fruits = ["apple", "banana", "cherry"];
 for (let fruit of fruits) {  //  Looping through an array
     console.log(fruit);
@@ -81,49 +85,49 @@ for (let fruit of fruits) {  //  Looping through an array
 // banana
 // cherry
 
-let name = "Alice";
+let name = "Mukul";
 for (let char of name) { //  Looping through a string
     console.log(char);
 }
 // Output:
-// A
+// M
+// u
+// k
+// u
 // l
-// i
-// c
-// e
 
-let uniqueNums = new Set([1, 2, 3]);
-
-for (let num of uniqueNums) { // Looping through a Set
+let uniqueNum = new Set([1, 2, 3]);
+for (let num of uniqueNum) { // Looping through a Set
     console.log(num);
 }
 // Output: 1 2 3
+
 let userMap = new Map([
-    ["name", "John"],
-    ["age", 30],
+    ["name", "Mukul"],
+    ["age", 25],
 ]);
 
 for (let [key, value] of userMap) { // Looping through a Map
     console.log(`${key}: ${value}`);  // template literals
 }
 // Output:
-// name: John
-// age: 30
+// name: Mukul
+// age: 25
 
-// for ...in loop
+// for ...in loop --> Applied on an object
 let person1 = {
-    name: "Alice",
+    name: "Mukul",
     age: 25,
-    city: "New York"
+    city: "Haridwar"
 };
 
 for (let key in person1) { // Looping through an object
     console.log(key, person1[key]);
 }
 // Output:
-// name Alice
+// name Mukul
 // age 25
-// city New York
+// city Haridwar
 
 let fruitsName = ["apple", "banana", "cherry"];
 for (let index in fruitsName) { // Looping through an array (not recommended)
