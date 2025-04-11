@@ -264,7 +264,7 @@ for (let i = 1; i <= 10; i++) {
 
 // --------------------------------------------------------------------------
 
-// using for loop
+// using for loop - Example num = 121
 const reverseNumber = (n) => {
     let rev = 0;
     for (let num = n; num > 0; num = Math.floor(num / 10)) {
