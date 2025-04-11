@@ -162,20 +162,19 @@ console.log(array[0] + " " + array[1])
 
 // Understand variable scope: global scope, function scope, and block scope.
 
-let name = "Ram"; // global scope
+// let name = "Ram"; // global scope
+// function Outer() {
+//     let name = "Sita";
+//     // heavy computaion
+//     function Inner() {
+//         console.log(name);
+//     }
+//     return Inner;
+// }
+// const printName = Outer();
+// printName();
 
-function Outer() {
-    let name = "Site";
-    // heavy computaion
-    function Inner() {
-        console.log(name);
-    }
-    return Inner;
-}
-const printName = Outer();
-printName();
-
-
+// ----------------------------------------------------------------------------
 function createMultiplier(multiplier) {
     return function (number) {
         return number * multiplier; // Multiply input number by multiplier
@@ -183,16 +182,8 @@ function createMultiplier(multiplier) {
 
 }
 const child = createMultiplier(5);
-console.log(child(3))
-console.log(child(4))
-
-
-// function createMultiplier(multiplier) {
-// // Return a new function
-// return function(number) {
-//     return number * multiplier; // Multiply input number by multiplier
-// };
-// }
+console.log(child(3));
+console.log(child(4));
 
 const double = createMultiplier(2); // Function to double a number
 const triple = createMultiplier(3); // Function to triple a number
@@ -279,3 +270,32 @@ const IsPalindrome = (n) => {
 };
 const num = 121;
 console.log(`${num} is palindrome`, IsPalindrome(num));
+
+
+// ----------------------------------------------------------------------------------------
+
+// let name = "Ram"; // global scope
+// function Outer() {
+//     let name = "Sita";
+//     // heavy computaion
+//     function Inner() {
+//         console.log(name);
+//     }
+//     return Inner;
+// }
+// const printName = Outer();
+// printName();
+
+// ------------------------------------------------------------------
+
+let name = "Ram"; // global scope
+function Outer() {
+    // let name = "Sita";
+    // heavy computaion
+    function Inner() {
+        console.log(name);
+    }
+    return Inner;
+}
+const printName = Outer();
+printName();
