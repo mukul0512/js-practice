@@ -202,17 +202,16 @@ console.log(triple(5)); // 15
 /*
 Today's task
 
-Print table 5*1=5 …
-Understand variable scope: global scope, function scope, and block scope.
-10 digit number generate using Math.random
-Palindrome num check
-Swap two no. with (inside an array) and without extra variable
-Scope - global and block
-Call by reference - non primitive data types like object
-Mastering in loops, if …else, recursion
-Fibonacci Algo.
-Closure example using multiplier.
-
+* Print table 5*1=5 …
+* Understand variable scope: global scope, function scope, and block scope.
+* 10 digit number generate using Math.random
+* Palindrome num check
+* Swap two no. with (inside an array) and without extra variable
+* Scope - global and block
+* Call by reference - non primitive data types like object
+* Mastering in loops, if …else, recursion
+* Fibonacci Algo.
+* Closure example using multiplier.
 */
 
 // Print table 5*1=5 …
@@ -256,10 +255,19 @@ for (let i = 1; i <= 10; i++) {
 // --------------------------------------------------------------------------
 
 // using for loop - Example num = 121
+
+/*
+rev = 0
+ n = 121
+n % 10;
+n / 10 
+rev = rev * 10 + digit;
+
+*/
 const reverseNumber = (n) => {
     let rev = 0;
-    for (let num = n; num > 0; num = Math.floor(num / 10)) {
-        let digit = num % 10;
+    for (let num = n; num > 0; num = Math.floor(num / 10)) {   // n
+        let digit = num % 10;   // 
         rev = rev * 10 + digit;
     }
     return rev;
@@ -268,7 +276,9 @@ const IsPalindrome = (n) => {
     const reversed = reverseNumber(n);
     return n === reversed;
 };
-const num = 121;
+const num = 1;
+console.log(Math.floor(1 / 10));
+
 console.log(`${num} is palindrome`, IsPalindrome(num));
 
 
@@ -299,3 +309,38 @@ function Outer() {
 }
 const printName = Outer();
 printName();
+
+
+// ---------------------------------------------------------------------
+
+const multiply = (multiplier, ...bakiKaData) => {
+    console.log(multiplier);
+
+    console.log(bakiKaData);
+
+    for (let i = 0; i < bakiKaData.length; i++) {
+        console.log(bakiKaData[i] * multiplier);
+    }
+    return 5;
+}
+const temp = () => 5;
+console.log(temp());
+
+const returnedValue = multiply(2, 1, 2, 3, 4, 5, 6, 7)
+console.log(returnedValue);
+// const arr = multiply(2, 1, 2, 3);
+// console.log(arr);
+
+// ------------------------------------------------------------
+
+function outside() {
+    const s = 5;
+    function inside(s) {
+        return s * 2;
+    }
+    return inside;
+}
+console.log(outside())
+const s = outside();
+console.log(s(2));
+console.log(outside()(1));
