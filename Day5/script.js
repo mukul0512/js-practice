@@ -249,3 +249,33 @@ for (let i = 1; i <= 10; i++) {
 }
 
 // ------------------------------------------------------------------
+
+// Check Palindrome ex num = 121
+// const reverseNumber = (n, rev = 0) => {
+//     if (n === 0) return rev;
+//     return reverseNumber(Math.floor(n / 10), rev * 10 + (n % 10));
+// };
+// const IsPalindrome = (n) => {
+//     const reversed = reverseNumber(n);
+//     return n === reversed;
+// };
+// const num = 121;
+// console.log(`${num} is palindrome`, IsPalindrome(num));
+
+// --------------------------------------------------------------------------
+
+// using for loop
+const reverseNumber = (n) => {
+    let rev = 0;
+    for (let num = n; num > 0; num = Math.floor(num / 10)) {
+        let digit = num % 10;
+        rev = rev * 10 + digit;
+    }
+    return rev;
+};
+const IsPalindrome = (n) => {
+    const reversed = reverseNumber(n);
+    return n === reversed;
+};
+const num = 121;
+console.log(`${num} is palindrome`, IsPalindrome(num));
