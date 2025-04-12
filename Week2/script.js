@@ -1,3 +1,10 @@
+/*
+
+* Given 5 boxes, assign a random color and a random backgroundColor to each box using DOM concepts.
+
+
+*/
+
 // Dom vs BOM
 console.log(document.title = "DOM vs BOM");
 console.log(document.body);
@@ -45,7 +52,7 @@ console.log(conTableChild.lastElementChild.style.backgroundColor = "cyan");
 
 // -------------------------------------------------------------------------------------------------------------
 
-// selecting by id, class, quarry selector 
+// selecting by id, class, query selector 
 
 // class selector
 let boxes = document.getElementsByClassName("box2");
@@ -66,7 +73,7 @@ console.log(boxes2.style.backgroundColor = "white");
 
 // ----------------------------------------------------------------------
 
-// quarry selector --> it select first box whose class name is box2 
+// query selector --> it select first box whose class name is box2 
 console.log(document.querySelector(".box2"));
 let boxes3 = document.querySelector(".box2");
 console.log(boxes3);
@@ -74,7 +81,7 @@ console.log(boxes3.style.backgroundColor = "purple");
 
 // ----------------------------------------------------------------------------------------
 
-// quarrySelectorAll --> it return NodeList of all the html collection whose class name is box2 
+// querySelectorAll --> it return NodeList of all the html collection whose class name is box2 
 // To change the backgroundColor using this we need to run a forEach loop.
 
 console.log(document.querySelectorAll(".box2").forEach(e => {
@@ -109,3 +116,100 @@ console.log(document.querySelector(".container").contains(e[2]));
 
 // --------------------------------------------------------------------------------------------------------
 
+// Inserting and removing elements 
+
+// innerHTML
+console.log(document.querySelector(".box3").innerHTML);
+console.log(document.querySelector(".container3").innerHTML);
+let boxes5 = document.querySelector(".box3").innerHTML;
+console.log(boxes5);
+
+// outerHTML
+console.log(document.querySelector(".box3").outerHTML);
+console.log(document.querySelector(".container3").outerHTML);
+let boxes6 = document.querySelector(".box3").outerHTML;
+console.log(boxes6);
+
+// tagName --> applicable only for element nodes
+console.log(document.querySelector(".box3").tagName);
+console.log(document.querySelector(".container3").tagName);
+let boxes7 = document.querySelector(".box3").tagName;
+console.log(boxes7);
+
+// nodeName --> applicable for all types of node like comment, text etc
+console.log(document.querySelector(".box3").nodeName);
+console.log(document.querySelector(".container3").nodeName);
+let boxes8 = document.querySelector(".box3").nodeName;
+console.log(boxes8);
+
+// textContent
+console.log(document.querySelector(".box3").textContent);
+console.log(document.querySelector(".container3").textContent);
+let boxes9 = document.querySelector(".box3").textContent;
+console.log(boxes9);
+
+// hidden --> 
+console.log(document.querySelector(".box3").hidden);
+console.log(document.querySelector(".container3").hidden);
+let boxes10 = document.querySelector(".box3").hidden;
+console.log(boxes10);
+
+//change innerHTML
+console.log(document.querySelector(".box3").innerHTML = "Updated");
+console.log(document.querySelector(".container3").innerHTML);
+let boxes11 = document.querySelector(".box3").innerHTML;
+console.log(boxes11);
+
+// Attributes elements method
+
+// hasAttribute
+console.log(document.querySelector(".box3").hasAttribute("style"));
+// setAttribute
+console.log(document.querySelector(".box3").setAttribute("style", "display: inline"));
+// removeAttribute
+console.log(document.querySelector(".box3").removeAttribute("style"));
+// element.attributes - to get the collection of all the attribute
+console.log(document.querySelector(".box3").attributes);
+// designMode = "on"
+console.log(document.designMode = "on");
+// data attribute
+console.log(document.querySelector(".box3").dataset);
+console.log(document.querySelector(".box3").dataset);
+
+// createElement
+let div = document.createElement("div");
+div.innerHTML = "I have been inserted <b>by mukul karnwal </b>"
+div.setAttribute("class", "created");
+console.log(div);
+
+// insert element using append, prepend, before, after, replaceWith
+console.log(document.querySelector(".container3").append(div));
+console.log(document.querySelector(".container3").prepend(div));
+console.log(document.querySelector(".container3").before(div));
+console.log(document.querySelector(".container3").after(div));
+console.log(document.querySelector(".container3").replaceWith(div));
+
+// insertAdjacentHTML/Text/Element
+let cont5 = document.querySelector(".container3");
+console.log(cont5.insertAdjacentHTML("afterend", <b>I'm inserted afterend</b>));
+console.log(cont5.insertAdjacentHTML("afterbegin", <b>I'm inserted afterbegin</b>));
+console.log(cont5.insertAdjacentHTML("beforebegin", <b>I'm inserted beforebegin</b>));
+console.log(cont5.insertAdjacentHTML("beforeend", <b>I'm inserted beforeend</b>));
+
+// remove
+console.log(document.querySelector(".container3").remove());
+
+// classList
+console.log(document.querySelector(".container3").classList);
+// to add in classList
+console.log(document.querySelector(".container3").classList.add("MukulKK"));
+// to remove in classList
+console.log(document.querySelector(".container3").classList.remove("MukulKK"));
+// toggle
+console.log(document.querySelector(".container3").classList.toggle("red"));
+console.log(document.querySelector(".container3").classList.toggle("red"));
+// className
+console.log(document.querySelector(".container3").className);
+
+
+// --------------------------------------------------------------------------------------------
