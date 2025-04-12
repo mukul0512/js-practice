@@ -45,3 +45,67 @@ console.log(conTableChild.lastElementChild.style.backgroundColor = "cyan");
 
 // -------------------------------------------------------------------------------------------------------------
 
+// selecting by id, class, quarry selector 
+
+// class selector
+let boxes = document.getElementsByClassName("box2");
+console.log(boxes);
+console.log(boxes[0].style.backgroundColor = "red");
+console.log(boxes[1].style.backgroundColor = "blue");
+console.log(boxes[2].style.backgroundColor = "yellow");
+console.log(boxes[3].style.backgroundColor = "khaki");
+console.log(boxes[4].style.backgroundColor = "brown");
+
+// --------------------------------------------------------------------------
+
+// id selector
+console.log(document.getElementById("box2"));
+let boxes2 = document.getElementById("box2");
+console.log(boxes2);
+console.log(boxes2.style.backgroundColor = "white");
+
+// ----------------------------------------------------------------------
+
+// quarry selector --> it select first box whose class name is box2 
+console.log(document.querySelector(".box2"));
+let boxes3 = document.querySelector(".box2");
+console.log(boxes3);
+console.log(boxes3.style.backgroundColor = "purple");
+
+// ----------------------------------------------------------------------------------------
+
+// quarrySelectorAll --> it return NodeList of all the html collection whose class name is box2 
+// To change the backgroundColor using this we need to run a forEach loop.
+
+console.log(document.querySelectorAll(".box2").forEach(e => {
+    console.log(e);
+    // console.log(e.style.backgroundColor = "orange");
+}));
+
+let boxes4 = document.querySelectorAll(".box2").forEach(e => {
+    console.log(e.style.backgroundColor = "orange");
+});
+console.log(boxes4);
+
+// -----------------------------------------------------------------
+
+// tagName --> it return HTMLCollection and select all the div 
+console.log(document.getElementsByTagName("div"));
+let tagName = document.getElementsByTagName("div");
+console.log(tagName);
+
+// ----------------------------------------------------------------------------------------------------
+
+// matches(), closest(), contains() methods
+
+// element.matches()  
+let e = document.getElementsByTagName("div");
+console.log(e[4].matches("#box2"));
+// element.closest()
+console.log(e[3].closest(".container"));
+console.log(e[3].closest("html"));
+// .contains()
+console.log(document.querySelector(".container").contains(e[2]));
+
+// --------------------------------------------------------------------------------------------------------
+
