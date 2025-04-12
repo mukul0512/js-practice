@@ -313,6 +313,32 @@ printName();
 
 // ---------------------------------------------------------------------
 
+/*
+Rest Operator - Used in function parameters to collect remaining arguments into an array.
+
+*/
+// Example of rest operator
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+sum(1, 2, 3, 4);
+
+// ---------------------------------------------------------------------------------
+
+/*
+Spread Operator - Used to expand an iterable (like an array or object) into individual elements.
+
+*/
+// Example of Spread Operator
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+
+const ob1 = { a: 1, b: 2 };
+const ob2 = { ...ob1, c: 3 };
+
+// --------------------------------------------------------------------------------------
+
 const multiply = (multiplier, ...bakiKaData) => {
     console.log(multiplier);
 
