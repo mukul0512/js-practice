@@ -212,6 +212,7 @@ Today's task
 * Mastering in loops, if …else, recursion
 * Fibonacci Algo.
 * Closure example using multiplier.
+* Rest vs Spread Operator.
 */
 
 // Print table 5*1=5 …
