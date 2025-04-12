@@ -5,7 +5,7 @@ console.log(document.body.style.backgroundColor = "green");
 
 // --------------------------------------------------------------
 
-// How do we access Parents, Children, Sibling Nodes 
+// How do we access Parents, Children, Sibling Nodes from body
 console.log(document.body.childNodes[0]);  //  #text
 console.log(document.body.childNodes[1]);  // div.container
 console.log(document.body.childNodes[1].childNodes[0]); // #text
@@ -18,7 +18,7 @@ console.log(cont.style.backgroundColor = "yellow"); // yellow
 console.log(cont.firstElementChild.childNodes[1].style.backgroundColor = "white"); // white
 console.log(cont.lastElementChild.childNodes[1].style.backgroundColor = "white"); // purple
 // ---------------------------------------------------------------------------------------------
-
+// How do we access Parents, Children, Sibling Nodes from body
 let contChild = document.body.firstElementChild.children;
 console.log(contChild[0].style.backgroundColor = "red");
 console.log(contChild[1].style.backgroundColor = "blue");
@@ -31,7 +31,7 @@ console.log(contChild[7].previousElementSibling.style.backgroundColor = "pink");
 console.log(contChild[7].parentElement.style.backgroundColor = "pink");
 
 // --------------------------------------------------------------------------------------------------------
-
+// How do we access Parents, Children, Sibling Nodes inside table
 console.log(document.body.children);
 let conTableChild = document.body.children[1];
 console.log(conTableChild.caption.style.backgroundColor = "purple");
