@@ -22,6 +22,15 @@
   padding: 5px;
 }
 
+.box4 {
+  height: 45px;
+  width: 56px;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+  /* color: rgba(237, 13, 13, 0.97); */
+}
+
 #box2 {
   height: 45px;
   width: 56px;

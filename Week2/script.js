@@ -1,10 +1,3 @@
-/*
-
-* Given 5 boxes, assign a random color and a random backgroundColor to each box using DOM concepts.
-
-
-*/
-
 // Dom vs BOM
 console.log(document.title = "DOM vs BOM");
 console.log(document.body);
@@ -190,26 +183,50 @@ console.log(document.querySelector(".container3").after(div));
 console.log(document.querySelector(".container3").replaceWith(div));
 
 // insertAdjacentHTML/Text/Element
-let cont5 = document.querySelector(".container3");
-console.log(cont5.insertAdjacentHTML("afterend", <b>I'm inserted afterend</b>));
-console.log(cont5.insertAdjacentHTML("afterbegin", <b>I'm inserted afterbegin</b>));
-console.log(cont5.insertAdjacentHTML("beforebegin", <b>I'm inserted beforebegin</b>));
-console.log(cont5.insertAdjacentHTML("beforeend", <b>I'm inserted beforeend</b>));
+// let cont5 = document.querySelector(".container3");
+// console.log(cont5.insertAdjacentHTML("afterend", "<b>I'm inserted afterend</b>"));
+// console.log(cont5.insertAdjacentHTML("afterbegin", "<b>I'm inserted afterbegin</b>"));
+// console.log(cont5.insertAdjacentHTML("beforebegin", "<b>I'm inserted beforebegin</b>"));
+// console.log(cont5.insertAdjacentHTML("beforeend", "<b>I'm inserted beforeend</b>"));
 
-// remove
-console.log(document.querySelector(".container3").remove());
+// // remove
+// console.log(document.querySelector(".container3").remove());
 
-// classList
-console.log(document.querySelector(".container3").classList);
-// to add in classList
-console.log(document.querySelector(".container3").classList.add("MukulKK"));
-// to remove in classList
-console.log(document.querySelector(".container3").classList.remove("MukulKK"));
-// toggle
-console.log(document.querySelector(".container3").classList.toggle("red"));
-console.log(document.querySelector(".container3").classList.toggle("red"));
-// className
-console.log(document.querySelector(".container3").className);
+// // classList
+// console.log(document.querySelector(".container3").classList);
+// // to add in classList
+// console.log(document.querySelector(".container3").classList.add("MukulKK"));
+// // to remove in classList
+// console.log(document.querySelector(".container3").classList.remove("MukulKK"));
+// // toggle
+// console.log(document.querySelector(".container3").classList.toggle("red"));
+// console.log(document.querySelector(".container3").classList.toggle("red"));
+// // className
+// console.log(document.querySelector(".container3").className);
 
 
 // --------------------------------------------------------------------------------------------
+
+/*
+
+* Given 5 boxes, assign a random color and a random backgroundColor to each box using DOM concepts.
+
+
+*/
+
+// let boxes12 = document.getElementsByClassName("box4");
+let boxes12 = document.querySelector(".container4").children;
+// console.log(boxes12);
+
+function getRandomColor() {
+    // let val1 = 233;
+    let val1 = Math.floor(0 + Math.random() * 255);
+    let val2 = Math.floor(0 + Math.random() * 255)
+    let val3 = Math.floor(0 + Math.random() * 255)
+    return `rgb(${val1}, ${val2}, ${val3});`
+}
+
+Array.from(boxes12).forEach(e => {
+    console.log(e.style.backgroundColor = getRandomColor());
+    console.log(e.style.Color = getRandomColor());
+})
