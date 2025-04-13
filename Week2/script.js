@@ -13,8 +13,8 @@ let cont = document.body.childNodes[1];
 console.log(cont.firstChild); // #text
 console.log(cont.lastChild); // #text
 console.log(cont.style.backgroundColor = "yellow"); // yellow
-// console.log(cont.firstElementChild.style.backgroundColor = "red"); // red
-// console.log(cont.lastElementChild.style.backgroundColor = "purple"); // purple
+console.log(cont.firstElementChild.style.backgroundColor = "red"); // red
+console.log(cont.lastElementChild.style.backgroundColor = "purple"); // purple
 console.log(cont.firstElementChild.childNodes[1].style.backgroundColor = "white"); // white
 console.log(cont.lastElementChild.childNodes[1].style.backgroundColor = "white"); // purple
 // ---------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ let boxes3 = document.querySelector(".box2");
 console.log(boxes3);
 console.log(boxes3.style.backgroundColor = "purple");
 
-// ----------------------------------------------------------------------------------------
+// // ----------------------------------------------------------------------------------------
 
 // querySelectorAll --> it return NodeList of all the html collection whose class name is box2 
 // To change the backgroundColor using this we need to run a forEach loop.
@@ -216,17 +216,20 @@ console.log(document.querySelector(".container3").replaceWith(div));
 
 // let boxes12 = document.getElementsByClassName("box4");
 let boxes12 = document.querySelector(".container4").children;
-// console.log(boxes12);
+console.log(boxes12);
 
 function getRandomColor() {
     // let val1 = 233;
-    let val1 = Math.floor(0 + Math.random() * 255);
-    let val2 = Math.floor(0 + Math.random() * 255)
-    let val3 = Math.floor(0 + Math.random() * 255)
-    return `rgb(${val1}, ${val2}, ${val3});`
+    let val1 = Math.ceil(0 + Math.random() * 255);
+    let val2 = Math.ceil(0 + Math.random() * 255);
+    let val3 = Math.ceil(0 + Math.random() * 255);
+    return `rgb(${val1}, ${val2}, ${val3})`;
 }
 
 Array.from(boxes12).forEach(e => {
     console.log(e.style.backgroundColor = getRandomColor());
     console.log(e.style.Color = getRandomColor());
 })
+
+// ------------------------------------------------------------------------------------------------
+
