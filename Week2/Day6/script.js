@@ -210,34 +210,70 @@ console.log(houses)
 
 // Polyfill for bind method
 // Task -> create our own implementation of bind() method
-let name = {
-    firstname: "Mukul",
-    lastname: "Karnwal"
-}
 
-let printName = function (hometown, state, country) {
-    console.log(this.firstname + " " + this.lastname + " , " + hometown + ", " + state + ", " + country);
-}
+// let name = {
+//     firstname: "Mukul",
+//     lastname: "Karnwal"
+// }
 
-// let printMyName = printName.bind(name, "Haridwar");
-// printMyName("Uttarakhand", "India");
+// let printName = function (hometown, state, country) {
+//     console.log(this.firstname + " " + this.lastname + " , " + hometown + ", " + state + ", " + country);
+// }
 
-let printMyName = printName.bind(name, "Haridwar", "Uttarakhand");
-printMyName("India");
+// // let printMyName = printName.bind(name, "Haridwar");
+// // printMyName("Uttarakhand", "India");
 
-// Our own bind() method
-Function.prototype.mybind = function (...args) {
-    // this -> printName
-    let obj = this,
-        params = args.slice(1);
-    return function (...args2) {
-        // obj.call(args[0], params);
-        obj.apply(args[0], [...params, ...args2]);
+// let printMyName = printName.bind(name, "Haridwar", "Uttarakhand");
+// printMyName("India");
+
+// // Our own bind() method
+// Function.prototype.mybind = function (...args) {
+//     // this -> printName
+//     let obj = this,
+//         params = args.slice(1);
+//     return function (...args2) {
+//         // obj.call(args[0], params);
+//         obj.apply(args[0], [...params, ...args2]);
+//     }
+// }
+
+// // let printMyName2 = printName.mybind(name, "Haridwar");
+// // printMyName2("Uttarakhand", "India");
+
+// let printMyName2 = printName.mybind(name, "Haridwar", "Uttarakhand");
+// printMyName2("India");
+
+// ---------------------------------------------------------------------------------------------------------------
+
+// Function Currying implementation
+// 2 ways - 1. by using bind() method
+//        - 2. by using closures
+
+// 1. by using bind() method 
+// let multiply = function (x, y) {
+//     console.log(x * y);
+// }
+
+// // let multiplyByTwo = multiply.bind(this, 2, 3);
+// // multiplyByTwo(5); // 3 ignore 5 here
+// // let multiplyByTwo = multiply.bind(this);
+// // multiplyByTwo(2, 3);
+
+// let multiplyByTwo = multiply.bind(this, 2); // function currying 
+// multiplyByTwo(3);
+// let multiplyByThree = multiply.bind(this, 3);
+// multiplyByThree(5);
+
+// ------------------------------------------------------
+
+// 2. by using closures 
+let multiply = function (x) {
+    return function (y) {
+        console.log(x * y);
     }
 }
 
-// let printMyName2 = printName.mybind(name, "Haridwar");
-// printMyName2("Uttarakhand", "India");
-
-let printMyName2 = printName.mybind(name, "Haridwar", "Uttarakhand");
-printMyName2("India");
+let multiplyByTwo = multiply(2);
+multiplyByTwo(3);
+let multiplyByThree = multiply(3);
+multiplyByThree(5);
