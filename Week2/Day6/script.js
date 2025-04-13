@@ -67,41 +67,9 @@ function sum(p, q, r) {
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 
-/*
+// * The Magical Sorting Hat: Imagine you are creating a magical sorting hat for a wizard school. Implement a JavaScript function that takes an array of student names and assigns them to one of the four houses (Gryffindor (length less than 6), Hufflepuff(length less than 8), Ravenclaw(length less than 12), or Slytherin(length greater than or equal to 12)) based on the length of their names.
 
-* The Magical Sorting Hat: Imagine you are creating a magical sorting hat for a wizard school. Implement a JavaScript function that takes an array of student names and assigns them to one of the four houses (Gryffindor (length less than 6), Hufflepuff(length less than 8), Ravenclaw(length less than 12), or Slytherin(length greater than or equal to 12)) based on the length of their names.
-
-* Important problems for building logic skill
-
-* The Double Trouble: You are tasked with writing a function that doubles each element in an array. However, there's a catch: if the array contains consecutive duplicate elements, only double one of them.
-
-* The Mirror Mirror: Imagine you have a string, and you need to create a new string that is a mirror image of the original. Write a function that appends the reversed version of the original string to itself.
-
-* The Password Validator: You are building a password validation feature. Create a function that checks if a given password meets the following criteria: at least 8 characters long, contains both uppercase and lowercase letters, and includes at least one digit.
-
-* The Sum Selector: You are working on a function that should sum all numbers in an array until it encounters a negative number. Write a function that performs this summation.
-
-* The Vowel Counter: You need to create a function that counts the number of vowels in a given string. Consider both uppercase and lowercase vowels.
-
-* The Local Storage Manager: You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that takes a note object and saves it to the browser's local storage.
-
-* Async Array Mapping: Write an asynchronous function that takes an array of numbers and returns a new array of Promises where each number is multiplied by 2 after a delay of 500 milliseconds.
-
-* The Asynchronous Shopper: Imagine you are building an online shopping application. Write an asynchronous function called placeOrder that simulates placing an order and returns a promise. The promise should resolve with an order confirmation message after a random delay.
-
-* The Coffee Machine: In your coffee shop application, you need to simulate the process of brewing coffee asynchronously. Write an async function named brewCoffee that takes the type of coffee and returns a promise. The promise should resolve with a message indicating that the coffee is ready after a random delay.
-
-* The Array Filterer: You are building a search feature for your e-commerce site. Write a function named filterProducts that takes an array of product objects and a filter criterion. The function should return a new array containing only the products that match the filter criterion.
-
-* The Token Manager: You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time.
-
-* The Shopping Cart Totalizer: You are working on an e-commerce website, and you need to calculate the total cost of items in the shopping cart. Implement a function named calculateTotal that takes an array of products with prices and quantities and returns the total cost.
-
-* The Window Scroller: You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called.
-
-*/
-
-// Solution 1
+// Solution 
 
 let students = ["shubh", "anajali", "Shivani", "Shivangi", "Annapurna", "Shubham", "Krishnanendu", "Ravindranathan", "Shivesh", "kaif", "Emanuel"]
 
@@ -123,3 +91,153 @@ for (const student of students) {
 }
 
 console.log(houses)
+
+// -----------------------------------------------------------------------------------------------------------------
+
+// call(), apply() and bind() method
+
+// call() - Example 1 | creating function inside same method
+// let name = {
+//     firstname: "Mukul",
+//     lastname: "Karnwal",
+//     printFullName: function () {
+//         console.log(this.firstname + " " + this.lastname);
+//     }
+// }
+// name.printFullName();
+
+// let name2 = {
+//     firstname: "Krishna",
+//     lastname: "Sir"
+// }
+// // Function borrowing
+// name.printFullName.call(name2);
+
+// --------------------------------------------------------------------------------
+
+// call() - Example 2 | we can also create separate function
+// let name = {
+//     firstname: "Mukul",
+//     lastname: "Karnwal",
+// }
+
+// let printFullName = function () {
+//     console.log(this.firstname + " " + this.lastname);
+// }
+
+// printFullName.call(name);
+
+// let name2 = {
+//     firstname: "Krishna",
+//     lastname: "Sir"
+// }
+// // Function borrowing
+// printFullName.call(name2);
+// ---------------------------------------------------------------------------
+// Example 3
+// call() - if we had some parameter inside the function. We can pass arguments individually in the call() method
+// let name = {
+//     firstname: "Mukul",
+//     lastname: "Karnwal",
+// }
+
+// let printFullName = function (hometown) {
+//     console.log(`${this.firstname} ${this.lastname} from ` + hometown);
+// }
+
+// printFullName.call(name, "Haridwar");
+
+// let name2 = {
+//     firstname: "Krishna",
+//     lastname: "Sir"
+// }
+// // Function borrowing
+// printFullName.call(name2, "Varanasi");
+
+// ----------------------------------------------------------------------------------------
+
+// apply() - instead of passing arguments individually in the call() method we can pass arguments in an array list using apply() method.
+// let name = {
+//     firstname: "Mukul",
+//     lastname: "Karnwal",
+// }
+
+// let printFullName = function (hometown, state) {
+//     console.log(`${this.firstname} ${this.lastname} from ` + hometown + "," + state);
+// }
+
+// // printFullName.call(name, "Haridwar", " Uttarakhand"); // using call()
+// printFullName.apply(name, ["Haridwar", " Uttarakhand"]); // using apply()
+
+// let name2 = {
+//     firstname: "Krishna",
+//     lastname: "Sir"
+// }
+// // Function borrowing
+// // printFullName.call(name2, "Varanasi", " Uttar Pradesh"); // using call()
+// printFullName.apply(name2, ["Varanasi", " Uttar Pradesh"]); // using apply()
+
+// --------------------------------------------------------------------------------------------------------------
+
+// bind() -
+// * It will create a copy of printFullName method and bind that into name2 object and will return a function.
+// * It doesn't directly called that method like we called directly in call() method rather than it will return a method which will called latter.
+
+// let name = {
+//     firstname: "Mukul",
+//     lastname: "Karnwal",
+// }
+
+// let printFullName = function (hometown, state) {
+//     console.log(`${this.firstname} ${this.lastname} from ` + hometown + "," + state);
+// }
+
+// // printFullName.call(name, "Haridwar", " Uttarakhand"); // using call()
+// printFullName.apply(name, ["Haridwar", " Uttarakhand"]); // using apply()
+
+// let name2 = {
+//     firstname: "Krishna",
+//     lastname: "Sir"
+// }
+// // Function borrowing
+// // printFullName.call(name2, "Varanasi", " Uttar Pradesh"); // using call()
+// // printFullName.apply(name2, ["Varanasi", " Uttar Pradesh"]); // using apply()
+// let printMyName = printFullName.bind(name2, "Varanasi", " Uttar Pradesh"); // using bind()
+// console.log(printMyName); // return a method
+// printMyName(); // invoke latter
+
+// --------------------------------------------------------------------------------------------------------
+
+// Polyfill for bind method
+// Task -> create our own implementation of bind() method
+let name = {
+    firstname: "Mukul",
+    lastname: "Karnwal"
+}
+
+let printName = function (hometown, state, country) {
+    console.log(this.firstname + " " + this.lastname + " , " + hometown + ", " + state + ", " + country);
+}
+
+// let printMyName = printName.bind(name, "Haridwar");
+// printMyName("Uttarakhand", "India");
+
+let printMyName = printName.bind(name, "Haridwar", "Uttarakhand");
+printMyName("India");
+
+// Our own bind() method
+Function.prototype.mybind = function (...args) {
+    // this -> printName
+    let obj = this,
+        params = args.slice(1);
+    return function (...args2) {
+        // obj.call(args[0], params);
+        obj.apply(args[0], [...params, ...args2]);
+    }
+}
+
+// let printMyName2 = printName.mybind(name, "Haridwar");
+// printMyName2("Uttarakhand", "India");
+
+let printMyName2 = printName.mybind(name, "Haridwar", "Uttarakhand");
+printMyName2("India");
