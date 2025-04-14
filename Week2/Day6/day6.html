@@ -5,10 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 6</title>
+    <link rel="stylesheet" href="day6.css">
 </head>
 
 <body>
-    <h1>Fundamentals</h1>
+    <h1>Calculator</h1>
+    <div class="container">
+        <form id="calc">
+            <label for="num1">Number 1</label>
+            <input type="text" id="num1" name="num1" placeholder="Enter first number">
+            <br>
+            <br>
+            <label for="num2">Number 2</label>
+            <input type="text" id="num2" name="num2" placeholder="Enter second number">
+            <br>
+            <br>
+            <select name="operation">
+                <option value="Add">Add</option>
+                <option value="Subtract">Subtract</option>
+                <option value="Multiply">Multiply</option>
+                <option value="Divide">Divide</option>
+            </select>
+            <br>
+            <br>
+            <textarea name="res" id="res" type="res" placeholder="Result is: "></textarea>
+            <br>
+            <br>
+            <button class="submit" type="submit">Calculate</button>
+        </form>
+    </div>
 
     <script src="day6.js"></script>
 </body>
