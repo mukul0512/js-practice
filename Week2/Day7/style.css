@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.outerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  border-radius: 15px;
+  border: 3px solid black;
+  margin: 80px;
+  background-color: rgb(130, 237, 130);
+}
+
+nav {
+  padding: 5px;
+}
+
+#backArrow {
+  filter: invert();
+  width: 20px;
+}
+
+#settingIcon {
+  filter: invert();
+  float: right;
+  width: 17px;
+}
+
+.outputBox {
+  border: 1px solid black;
+  padding: 30px;
+  margin: 5px;
+}
+
+td {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+}
+
+button {
+  background-color: rgb(89, 217, 89);
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#delBtn {
+  background-color: black;
+}
+
+#eqBtn {
+  background-color: white;
+  color: black;
+}
