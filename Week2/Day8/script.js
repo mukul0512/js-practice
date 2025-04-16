@@ -26,7 +26,7 @@ let obj4 = {
 
 function combineAllObject(...objList) {   // rest operator - parameter mai pass kiye hue object ya array k element ko combine karne ka kaam karta hai
     return {
-        ...objList // spread operator - object ya array k elements ko receive karne ka kaam karta hai in spread form
+        ...objList // spread operator - object ya array k elements ko receive karke segregate karta hai in spread form
     }
 }
 
