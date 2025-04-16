@@ -16,14 +16,45 @@ const newUser = {
  * }
 */
 
-function getFinalUser(oldUser) {
+function getFinalUser(newUser, oldUser) {
     // logic
     return {
-        oldUser: oldUser.name,
-        name: this.name,
-        oldAge: oldUser.age,
-        age: this.age
+        ...newUser, oldName: oldUser.name, oldAge: oldUser.age
     }
 }
 
-console.log(getFinalUser.call(newUser, oldUser));
+// console.log(getFinalUser.call(newUser, oldUser));
+console.log(getFinalUser(newUser, oldUser));
+
+
+// --------------------------------------------------------------------------
+
+// cloning object using spread operator 
+
+let src = {
+    age: 12,
+    wt: 68,
+    ht: 172
+};
+
+let dest1 = { ...src };
+src.age = 90;
+console.log("src: ", src);
+console.log("dest: ", dest1);
+
+// ----------------------------------------------------------------------------------
+
+// let src = {
+//     age: 12,
+//     wt: 68,
+//     ht: 172
+// };
+
+// let src2 = {
+//     value: 101,
+//     name: "Mukul Karnwal"
+// }
+
+// let dest = Object.assign({}, src, src2);
+// console.log(dest);
+
