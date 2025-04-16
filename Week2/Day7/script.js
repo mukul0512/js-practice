@@ -5,7 +5,13 @@ buttons.forEach(button => {
     button.addEventListener("click", () => {
         const value = button.textContent;
         if (value === "=") {
-            currentInput = eval(currentInput).toString();
+            try {
+                currentInput = eval(currentInput).toString();
+            } catch {
+                alert('Please enter valid expression')
+                output.textContent = ''
+                return
+            }
         } else if (value === "Del") {
             currentInput = currentInput.slice(0, -1);
         } else {
