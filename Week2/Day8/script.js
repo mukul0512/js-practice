@@ -42,6 +42,7 @@ function add(...z) {  // rest operator
     return res;
 }
 
+
 function printElements(...elementList) {
     console.log(...elementList);
 }
@@ -63,8 +64,7 @@ function addNumbers(a, b, c, ...other) { // using rest operator
     console.log(other[1]);
     console.log(other[2]);
     console.log(other[3]);
-    console.log(other[4]);
-    return a + b + c + other; // 6 is the sum od a, b, c and 8, 9, 15, 16 are the other array element
+    return a + b + c + other; // 6 is the sum ond a, b, c and 8, 9, 15, 16 are the other array element
 }
 const result = addNumbers(2, 3, 1, 8, 9, 15, 16);
 console.log(result);
