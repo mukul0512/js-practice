@@ -3,16 +3,12 @@
 // which will be combination of all object
 
 // rest operator and spread operator must be used
-function combineAllObject(...combineAllObject) {
-    console.log(combineAllObject);
-    console.log(combineAllObject[0]);
-    console.log(combineAllObject[1]);
-    console.log(combineAllObject[2]);
-
-    // logic
-    return {
-        ...combineAllObject // spread operator
-    };
+function combineAllObject(...objectList) {
+    let result = {}
+    objectList.forEach(obj => {
+        result = { ...result, ...obj }
+    });
+    return result
 }
 let obj1 = {
     name: "Ram",
