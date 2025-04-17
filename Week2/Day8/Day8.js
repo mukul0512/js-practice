@@ -4,12 +4,16 @@
 
 // rest operator and spread operator must be used
 function combineAllObject(...objectList) {
+    // console.log(objectList);
     let result = {}
     objectList.forEach(obj => {
         result = { ...result, ...obj }
+        // console.log(result);
+        // console.log(obj);
     });
     return result
 }
+
 let obj1 = {
     name: "Ram",
     age: 25
