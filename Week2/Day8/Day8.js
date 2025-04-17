@@ -4,13 +4,12 @@
 
 // rest operator and spread operator must be used
 function combineAllObject(...objectList) {
-    // console.log(objectList);
+    console.log(objectList);
     let result = {}
-    objectList.forEach(obj => {
-        result = { ...result, ...obj }
-        // console.log(result);
-        // console.log(obj);
-    });
+    for (let i = 0; i < objectList.length; i++) {
+        result = { ...result, ...objectList[i] };
+        console.log(result);
+    }
     return result
 }
 
