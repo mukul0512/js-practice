@@ -108,11 +108,10 @@ for (let i = 0; i < items.length; i++) {
 console.log(items);
 // -------------------------------------------------------------------------
 
-function countNumOfVowels(str) {
+function countVowel(str) {
     let result = {};
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     for (let i = 0; i < str.length; i++) {
-        /// check if current char is a vowel 
         let currentChar = str.charAt(i);
         if (vowels.includes(currentChar)) {
             if (result[currentChar]) {
@@ -124,7 +123,65 @@ function countNumOfVowels(str) {
         }
     }
     return result;
+}
+console.log(countVowel("mukul karnwal codingworkx"));
 
+// ---------------------------------------------------------------------------------
+
+// given a string "Hello World" count the no of character and print
+
+function charCountOfString(str) {
+    let totalCount = {};
+    for (let i = 0; i < str.length; i++) {
+        let currentCharacter = str.charAt(i);
+        if (totalCount[currentCharacter]) {
+            totalCount[currentCharacter]++;
+        }
+        else {
+            totalCount[currentCharacter] = 1;
+        }
+    }
+    return totalCount;
 }
 
-console.log(countNumOfVowels("Hello World in the great wall"));
+console.log(charCountOfString("Hello World"));
+
+// ------------------------------------------------------------------
+
+// given a string of words "This is my company and that is my profile."
+
+
+function countWordsOfString(str) {
+    let wordMap = {};
+    let words = str.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        if (wordMap[word]) {
+            wordMap[word] += 1;
+        }
+        else {
+            wordMap[word] = 1;
+        }
+    }
+    return wordMap;
+
+}
+console.log(countWordsOfString("this is my company and this is my profile"));
+
+
+// -----------------------------------------------------------------
+
+function splitWordsOfArray(str) {
+    let result = [];
+    let word = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) == " ") {
+            result.push(word);
+            word = "";
+        } else {
+            word = word + str.charAt(i);
+        }
+    }
+    return result;
+}
+console.log(splitWordsOfArray("this is my company and this is my profile"));
