@@ -106,3 +106,25 @@ for (let i = 0; i < items.length; i++) {
     items[i] -= offer;
 }
 console.log(items);
+// -------------------------------------------------------------------------
+
+function countNumOfVowels(str) {
+    let result = {};
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    for (let i = 0; i < str.length; i++) {
+        /// check if current char is a vowel 
+        let currentChar = str.charAt(i);
+        if (vowels.includes(currentChar)) {
+            if (result[currentChar]) {
+                result[currentChar]++;
+            }
+            else {
+                result[currentChar] = 1;
+            }
+        }
+    }
+    return result;
+
+}
+
+console.log(countNumOfVowels("Hello World in the great wall"));
