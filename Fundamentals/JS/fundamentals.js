@@ -137,3 +137,28 @@ do {
 } while (t < 100);
 
 // ----------------------------------------------------------------------------------
+
+// Create a game where you start with any random game number. Ask the user to keep guessing the game number until the user enters correct value.
+
+// using classical for loop
+// let gameNum = 25;
+// for (let u = 0; ; u++) {
+//     let guessNum = prompt("Enter the game number ");
+//     if (guessNum == gameNumber) {
+//         console.log("Congratulations ! You guessed it right !");
+//         break;
+//     }
+//     else {
+//         console.log("You guessed it wrong ! Try again.");
+//     }
+// }
+// using while loop
+// let gameNumber = 25;
+// let userNumber = prompt("Guess the game number ");
+// while (userNumber != gameNumber) {
+//     userNumber = prompt("You entered wrong number. Guess again")
+// }
+// console.log("Congratulations ! you guessed it right.");
+
+// --------------------------------------------------------------------------------------
+
