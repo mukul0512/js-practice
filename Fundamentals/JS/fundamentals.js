@@ -56,6 +56,7 @@ do {
 // ----------------------------------------------------------------------------
 
 // for ...of loop -> only applied over strings and arrays
+// over string
 let str = "codingworkx";
 for (let i of str) { // i can be value which is iterator gives character of string
     console.log(i);
@@ -65,7 +66,21 @@ for (let i of str) { // i can be value which is iterator gives character of stri
 let str1 = "Java Script";
 let lengthOfStr1 = 0;
 for (let i of str1) {
+    console.log(i);
     lengthOfStr1++;
 }
 console.log(lengthOfStr1);
 // -----------------------------------------------------------------------------------------------
+// for ...in loop -> only applied over objects and arrays 
+// over objects
+let student = {
+    name: "Mukul Karnwal",
+    age: 25,
+    marks: 68.91,
+    isPass: true
+}
+for (let key in student) {
+    console.log(key, student[key]);
+}
+// -----------------------------------------------------------------------------------
+
