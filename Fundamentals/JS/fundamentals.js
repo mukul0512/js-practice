@@ -55,3 +55,17 @@ do {
 
 // ----------------------------------------------------------------------------
 
+// for ...of loop -> only applied over strings and arrays
+let str = "codingworkx";
+for (let i of str) { // i can be value which is iterator gives character of string
+    console.log(i);
+}
+
+// Calculate length of string
+let str1 = "Java Script";
+let lengthOfStr1 = 0;
+for (let i of str1) {
+    lengthOfStr1++;
+}
+console.log(lengthOfStr1);
+// -----------------------------------------------------------------------------------------------
