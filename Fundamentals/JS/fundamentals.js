@@ -84,3 +84,56 @@ for (let key in student) {
 }
 // -----------------------------------------------------------------------------------
 
+// Practice Example
+// print all even number from 0 to 100 
+/*
+Algo -
+Step1 - print all number from 0 to 100
+Step2 - logic of even is num % 2 == 0 
+Step3 - print even number 
+
+*/
+
+// step1 - print all number from 0 to 100
+// using classical for loop
+for (let i = 0; i < 100; i++) {
+    console.log(i);
+}
+// using while loop
+let p = 0;
+while (p < 100) {
+    console.log(p);
+    p++;
+}
+// using do while loop
+let q = 0;
+do {
+    console.log(q);
+    q++;
+} while (q < 100);
+// ----------------------------------------------------------------------------------------------------------------
+// Step 2, 3 -> logic of even no -> print 
+// using classical for loop
+for (let r = 0; r < 100; r++) {
+    if (r % 2 == 0) {
+        console.log(r);
+    }
+}
+// using while loop
+let s = 0;
+while (s < 100) {
+    if (s % 2 == 0) {
+        console.log(s);
+    }
+    s++;
+}
+// using do while loop
+let t = 0;
+do {
+    if (t % 2 == 0) {
+        console.log(t);
+    }
+    t++;
+} while (t < 100);
+
+// ----------------------------------------------------------------------------------
