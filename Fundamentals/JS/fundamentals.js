@@ -162,3 +162,35 @@ do {
 
 // --------------------------------------------------------------------------------------
 
+// Strings -> Sequence of characters used to represent text
+// inbuilt properties -> .length, behaves like object like obj[key] -> str.length, str[position] -> indices
+// create string
+let str2 = "codingworkx";
+// string length
+console.log(str2.length);
+console.log(str2);
+// string indices
+console.log(str2[0]);
+console.log(str2[1]);
+console.log(str2[2]);
+console.log(str2[3]);
+// Template literals
+let sentence = `This is a sentence`;
+console.log(sentence);
+// -------------------------------------------------------
+// need of template literals -> a way to embedded expression in string
+let obj = {
+    item: "pen",
+    price: 10
+}
+console.log("The cost of " + obj.item + " is " + obj.price + " rupees"); // without template literal
+// string interpolation -> to create string by doing substitution of placeholder
+console.log(`The cost of ${obj.item} is ${obj.price} rupees`); // using template literal and string interpolation
+
+console.log(`${1 + 2 + 3}`); // it first calculate the value and than be the part of a string interpolation
+
+// escape characters -> also be the part of string
+
+// ---------------------------------------------------------------------------------------
+
+// String Methods
