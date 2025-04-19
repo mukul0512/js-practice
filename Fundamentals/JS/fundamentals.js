@@ -193,4 +193,86 @@ console.log(`${1 + 2 + 3}`); // it first calculate the value and than be the par
 
 // ---------------------------------------------------------------------------------------
 
-// String Methods
+// String Methods/Functions - These are built-in function to manipulate a string
+// String are immutable
+// str3.toUpperCase()
+// Case 1
+let str3 = "codingworkx";
+console.log(str3.toUpperCase());
+console.log(str3); // neither method of string changed the original string
+// Case 2 
+str3 = str3.toUpperCase();
+console.log(str3);
+// Case 3
+let newStr3 = str3.toUpperCase(); // methods of string always return a new value.
+console.log(newStr3);
+
+// str4.toLowerCase()
+// Case 1
+let str4 = "MUKUL KARNWAL";
+console.log(str4.toLowerCase());
+console.log(str4);
+// Case 2
+str4 = str4.toLowerCase();
+console.log(str4);
+// Case 3
+let newStr4 = str4.toLowerCase();
+console.log(newStr4);
+
+// str5.trim() - remove whitespace from start and end only
+// CAse 1
+let str5 = "    coding   workx  js  ";
+console.log(str5.trim());
+console.log(str5);
+// Case 2
+str5 = str5.trim();
+console.log(str5);
+// Case 3
+let newStr5 = str5.trim();
+console.log(newStr5);
+
+// str6.slice(start, end) -> returns part of string
+// Case 1
+let str6 = "Coding Workx";
+console.log(str6.slice(1, 8)); // it take end index - 1 as it last index is exclusive
+// Case 2
+console.log(str6.slice(1)); // if end don't have end index than take whole string as whole from start index
+// Case 3
+str6 = str6.slice(1, 8);
+console.log(str6);
+// Case 4
+let newStr6 = str6.slice(1, 8);
+console.log(newStr6);
+
+// str7.concat() -> // join str8 with str7
+// Case 1
+let str7 = "Hello";
+let str8 = "World";
+let res = str7 + str8;
+console.log(res);
+// Case 2
+let newStr8 = str7.concat(str8);
+console.log(newStr8);
+
+// str9.replace(searchVal, newVal) -> only match first time
+// Case 1
+let str9 = "Hello there. Mukul this side."
+console.log(str9.replace("Mukul", "Karnwal"));
+// Case 2
+let str11 = "hellololo";
+console.log(str11.replace("lo", "p")); // here lo is replaced by p only first time it occur
+// Case 3
+// str11.replaceAll(searchVal, newVal) -> it replace all occurrence from string
+console.log(str11.replaceAll("lo", "p")); // here all occurrence of lo is replaced by p
+
+// str10.charAt(idx)
+// Case 1
+let str10 = "Hello World";
+console.log(str10.charAt(6));
+// Case 2
+let str12 = str10.charAt(6); // after applied method than always store new string in new variable to use this modified string in your code latter.
+// Case 3
+str10[6] = "B"; // not possible in case of string because strings are immutable. You can use replace(searchVal, newVal) method to do that.
+console.log(str10);
+
+// Practice Question
