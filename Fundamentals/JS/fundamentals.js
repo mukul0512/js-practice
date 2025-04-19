@@ -55,7 +55,7 @@ do {
 
 // ----------------------------------------------------------------------------
 
-// for ...of loop -> only applied over strings and arrays
+// for ...of loop -> applied over strings and arrays
 // over string
 let str = "codingworkx";
 for (let i of str) { // i can be value which is iterator gives character of string
@@ -71,7 +71,7 @@ for (let i of str1) {
 }
 console.log(lengthOfStr1);
 // -----------------------------------------------------------------------------------------------
-// for ...in loop -> only applied over objects and arrays 
+// for ...in loop -> applied over objects and arrays 
 // over objects
 let student = {
     name: "Mukul Karnwal",
@@ -656,4 +656,176 @@ console.log(addedAmazonAtEnd);
 console.log(companiesName);
 
 // -----------------------------------------------------------------------------
+
+// Functions and Methods
+
+// Functions -> Block of code that performs a specific task, can be invoked whenever needed.
+// Helps in redundancy/repeating in our code.
+
+/*
+
+Function Definition
+function functionName() {
+    do some work ...
+}
+
+function functionName(param1, param2) {
+    do some work    
+}
+
+Function Call
+functionName();
+
+*/
+
+// Example 1
+function myFunction() {
+    console.log("This is my function");
+    console.log("I have to built application");
+    console.log("Codingworkx is the best place to learn and growth");
+}
+myFunction();
+myFunction();
+myFunction();
+
+function myFunction2(msg, n) { // parameter -> input | local variables
+    // console.log(msg * n); // err : NaN means Not a Number
+    console.log(msg + n);
+    console.log(msg, n);
+}
+myFunction2("Hello", 5); // argument
+
+// Create a function calculate sum of 2 number
+function sumOfTwoNum(a, b) {
+    let sum = a + b;
+    return sum;
+}
+// console.log(sumOfTwoNum(1, 2));
+let sumOfTwo = sumOfTwoNum(1, 2);
+console.log(sumOfTwo);
+
+// Arrow Functions -> Compact(small) way of writing a function
+// Example 
+/*
+
+const functionName = (param1, param2) => {
+        do some work
+    }
+
+*/
+
+// multiplication
+const multiplyFunc = (a, b) => {
+    return a * b;
+}
+console.log(multiplyFunc(2, 3));
+
+// Practice
+/*
+
+Que 1. Create a function using "function" keyword that takes a String as an arguments and returns the number of vowels in the string.
+
+Ques 2. Create an arrow function to perform the same task.
+
+*/
+
+// using for loop
+// function numOfVowels(str) {
+//     let vowels = ['a', 'e', 'i', 'o', 'u'];
+//     let newStr = {};
+//     for (let i = 0; i < str.length; i++) {
+//         let currentChar = str.charAt(i);
+//         console.log(currentChar);
+//         if (vowels.includes(currentChar)) {
+//             if (newStr[currentChar]) {
+//                 newStr[currentChar]++;
+//             }
+//             else {
+//                 newStr[currentChar] = 1;
+//             }
+//         }
+//     }
+//     return newStr;
+// }
+// console.log(numOfVowels("codingworkx"));
+
+// using for ...of loop
+// let finalStr = {};
+// let vowels = ['a', 'e', 'i', 'o', 'u'];
+// const vowelStr = (str) => {
+//     for (let val of str) {
+//         console.log(val);
+//         if (vowels.includes(val)) {
+//             if (finalStr[val]) {
+//                 finalStr[val] += 1;
+//             }
+//             else {
+//                 finalStr[val] = 1;
+//             }
+//         }
+//     }
+//     return finalStr;
+// }
+// console.log(vowelStr("MukulKarnwal"));
+
+// -------------------------------------------------------------------------------
+
+function countVowels(str) {
+    let count = 0;
+    for (let char of str) {
+        console.log(char);
+        if (char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countVowels("Hello World"));
+
+// ----------------------------------------------------------------------------------------------
+
+// arr.forEach(callBackFunction) loop 
+/*
+
+callBackFunction : Here, it is a function to execute for each element in the array.
+Note -> A callBack is a function passed as an argument to another function.
+Note -> can only be used as an array not for strings. 
+Note -> forEach() is a method
+
+Example
+arr.forEach((val) => {
+    console.log(val);
+})
+
+*/
+
+let arr = [1, 2, 3, 4, 5];
+let citiesName = ["Haridwar", "Roorkee", "Dehradun", "Noida"];
+// arr.forEach(function printVal(val, idx, arr) { // value at each idx of an array
+//     console.log(val);
+// })
+
+arr.forEach((val) => {
+    console.log(val);
+})
+
+citesName.forEach((val, idx, citesName) => {
+    console.log(val, idx, citesName);
+})
+
+// Higher Order Function -> which takes other functions as a parameter or return any other function as an output.
+// .forEach() -> is a higher order function
+
+// Practice Question
+// For a given array of numbers, print the square of each value using forEach() loop
+// Case 1
+let arrNum = [20, 10, 21, 15, 84];
+// arrNum.forEach((val) => {
+//     console.log(val * val);
+// })
+// Case 2
+let calcSquare = (num) => {
+    console.log(num * num);
+}
+arrNum.forEach(calcSquare);
 
