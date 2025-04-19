@@ -275,4 +275,36 @@ let str12 = str10.charAt(6); // after applied method than always store new strin
 str10[6] = "B"; // not possible in case of string because strings are immutable. You can use replace(searchVal, newVal) method to do that.
 console.log(str10);
 
-// Practice Question
+/*
+
+Practice Question
+
+Prompt the user to enter their full name. Generate a username for them based on the input.
+Start username with @, followed by their full name and ending with the fullname length.
+
+eg. user name = "mukulkarnwal", username should be "@mukulKarnwal05"
+
+*/
+// let fullname = prompt(`Enter your full name without spaces`);
+// console.log(fullname);
+// Case 1 - without template literal amd string interpolation
+// let username = "@" + fullname + fullname.length;
+// console.log(username);
+
+// Case 2 - using template literal amd string interpolation
+// let username = `@${fullname}`;
+// console.log(username);
+
+// let finalname = `${username.length}`
+// console.log(finalname);
+// username = `${username}${finalname}`;
+// console.log(username);
+
+// Case 2 - using str1.concat(str2)
+// let firstname = "@";
+// let lastname = `${fullname.length}`
+// let finalFullName = firstname.concat(fullname, lastname);
+// console.log(finalFullName);
+
+// ----------------------------------------------------------------------------------------------------------
+
