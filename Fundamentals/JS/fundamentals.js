@@ -565,3 +565,95 @@ console.log(finalPriceOnItems);
 // --------------------------------------------------------------------------------------
 
 // Arrays Methods
+
+// Note -> In case of array we have 2 types of methods some methods have change the array and some methods are not change our original array even gives us by returning new array.
+// Note -> unshift() -> push ka bhai hota hai.
+// Note -> shift() -> pop() ka bhai hota hai.
+
+// .push() -> add element to end position
+let foodItems = ["Apple", "Potato", "Tomato", "Paneer"];
+console.log(foodItems.push("Mango")); // return the length 
+console.log(foodItems);
+
+// .unshift() -> add element at start position
+console.log(foodItems.unshift("Banana")); // return length
+console.log(foodItems);
+
+// .pop() -> delete from end position & return deleted element.
+let deletedItem = foodItems.pop();
+console.log(deletedItem);
+// console.log(foodItems.pop()); // return the deleted element
+console.log(foodItems);
+
+// .shift() -> delete element from start position and return deleted element.
+let deletedItem1 = foodItems.shift();
+console.log(deletedItem1);
+// console.log(foodItems.shift()); // return the deleted element
+console.log(foodItems);
+
+// .toString() -> converts array to string
+let newString = foodItems.toString();
+console.log(newString);
+// console.log(foodItems.toString());
+console.log(foodItems); // original array is still same
+
+// .concat() -> joins multiple arrays and return result. Can't change original array
+let marvelHeroes = ["thor", "spiderman", "ironman"];
+let dcHeroes = ["superman", "batman"];
+let indianHeroes = ["shaktiman", "krish"]
+let heroUniverse = marvelHeroes.concat(dcHeroes, indianHeroes);
+console.log(heroUniverse);
+
+// .slice(startIdx, endIdx) -> returns a piece of the array
+// Note -> takes endIdx - 1
+// Example
+let marvelHero = ["thor", "spiderman", "ironman", "antman", "Dr. Strange"];
+let marvelHeroUniverse = marvelHero.slice(1, 3)
+let marvelHeroUniverse1 = marvelHero.slice(1)
+console.log(marvelHeroUniverse); //because ending index is non inclusive
+console.log(marvelHeroUniverse1);
+
+// .splice(startIdx, delCount, newElem1 ...) -> change original array (add, remove, replace)
+// Case 1 Add
+let marvelHeroAfterAdded = marvelHero.splice(2, 0, "Added New Hero");
+console.log(marvelHeroAfterAdded);
+console.log(marvelHero); // element added at index 2 into original array
+
+// Case 2 Remove
+let marvelHeroAfterRemoved = marvelHero.splice(1, 3);
+console.log(marvelHeroAfterRemoved);
+console.log(marvelHero);
+
+// Case 3 Replace
+let marvelHeroUniverse2 = marvelHero.splice(1, 2, "tony stark", "Dr. Strange", "new hero");
+console.log(marvelHeroUniverse2);
+console.log(marvelHero); // original array is change now
+
+// Case 4 -> acts like slice()
+let marvelHeroForOneParam = marvelHero.splice(2);
+console.log(marvelHeroForOneParam); // deleted elements returned
+console.log(marvelHero); // remaining elements
+
+// ----------------------------------------------------------------------------------------------
+
+// Practice Question
+// Create an array to store companies -> "Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"
+let companiesName = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+
+// a. Remove the first company from the array
+// let removedFirstCompany = companiesName.shift();
+// console.log(removedFirstCompany);
+// console.log(companiesName);
+
+// b. Remove Uber and Add Ola in its place.
+let replacedCompany = companiesName.splice(2, 1, "Ola")
+console.log(replacedCompany);
+console.log(companiesName);
+
+// c. Add Amazon at the end.
+let addedAmazonAtEnd = companiesName.push("Amazon");
+console.log(addedAmazonAtEnd);
+console.log(companiesName);
+
+// -----------------------------------------------------------------------------
+
