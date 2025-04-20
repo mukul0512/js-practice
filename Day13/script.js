@@ -129,3 +129,90 @@ getData(1, () => { // 2s here data 1 is came and getting of data 2 through callb
     })
 })
 
+// --------------------------------------------------------------------------------------------------
+
+/*
+
+* Promises -> is an object representing eventual completion or failure of an asynchronous operation or task.
+* It is a solution to callback hell.
+* Example
+let promise = new Promise((resolve, reject) => {...}) // function with 2 handlers i.e. resolve and reject
+* resolve and reject are callbacks provided by JS.
+
+*/
+// Example of creating our own promise
+// let promise = new Promise((resolve, reject) => {
+//     console.log("I'm a promise");
+//     resolve("success");
+//     reject("some error occurred");
+// });
+// console.log(promise);
+
+// Promise State
+// 1. Pending State -> the result is undefined
+// 2. Resolved State -> the result is a value (fulfilled)        // resolve(result)
+// 3. Rejected State -> the result is an error object            // reject(error)
+
+// Example of an API here getNewData return some data in promise
+function getNewData(dataId, getNextData) { // assume it takes 2 sec to search dataId from the database
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // console.log("data", dataId); // in case err: 
+            // resolve("success");
+            reject("error");
+            if (getNewData) {
+                getNewData();
+            }
+        }, 5000);
+    });
+}
+
+let promise = getNewData(123);
+console.log(promise);
+
+// ----------------------------------------------------------------------------------------------------------
+
+/*
+
+* Question -> How do we use promises after receiving
+* .then() and .catch()
+
+* promise.then((res) => {...});
+
+* promise.catch((err) => {...});
+
+*/
+
+// Example
+
+const ourOwnPromise = () => {
+    return new Promise((resolve, reject) => {
+        console.log("I'm a promise");
+        // resolve("success");
+        reject("network error");
+    });
+}
+
+let finalPromise = ourOwnPromise();
+promise.then((res) => {
+    console.log("promise fulfilled", res);
+});
+
+finalPromise.catch((err) => {
+    console.log("rejected", err);
+})
+
+// function getNewDataFromDatabase(dataId, getNextData) { // assume it takes 2 sec to search dataId from the database
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("data", dataId);
+//             resolve("success");
+//             if (getNewDataFromDatabase) {
+//                 getNewDataFromDatabase();
+//             }
+//         }, 5000);
+//     });
+// }
+
+// let receivedPromise = getNewDataFromDatabase(123);
+// console.log(receivedPromise);
