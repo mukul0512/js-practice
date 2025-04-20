@@ -932,20 +932,36 @@ console.log(resMarks);
 // use the reduce method to calculate sum of all numbers in the array.
 // Use the reduce method to calculate product/factorial of all numbers in the array.
 
-let n = prompt("Enter the value of n ");
-let arrFromUser = [];
-for (let i = 1; i <= n; i++) {
-    arrFromUser[i - 1] = i; // 1(0), 2(1), 3(2), 4(3), 5(4)
-}
-console.log(arrFromUser);
-// calculate sum of all numbers in the array.
-let sumOfAllNum = arrFromUser.reduce((res, curr) => {
-    return res + curr;
-});
-console.log(sumOfAllNum);
-// calculate product/factorial of all numbers in the array
+// let n = prompt("Enter the value of n ");
+// let arrFromUser = [];
+// for (let i = 1; i <= n; i++) {
+//     arrFromUser[i - 1] = i; // 1(0), 2(1), 3(2), 4(3), 5(4)
+// }
+// console.log(arrFromUser);
+// // calculate sum of all numbers in the array.
+// let sumOfAllNum = arrFromUser.reduce((res, curr) => {
+//     return res + curr;
+// });
+// console.log(sumOfAllNum);
+// // calculate product/factorial of all numbers in the array
 
-let factorialOfAllNum = arrFromUser.reduce((res, curr) => {
-    return res * curr;
-});
-console.log(factorialOfAllNum);
+// let factorialOfAllNum = arrFromUser.reduce((res, curr) => {
+//     return res * curr;
+// });
+// console.log(factorialOfAllNum);
+
+// --------------------------------------------------------------------------------------
+
+// Events
+/*
+
+1. The change in the state of object is known as Event
+2. Events are fired to notify code of "interesting changes" that may affect code execution.
+
+* Mouse events (click, double click, etc)
+* Keyboard events (keypress, keyup, keydown)
+* Form events (submit etc)
+* Print events etc
+
+*/
+
