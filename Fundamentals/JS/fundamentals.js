@@ -827,5 +827,125 @@ let arrNum = [20, 10, 21, 15, 84];
 let calcSquare = (num) => {
     console.log(num * num);
 }
-arrNum.forEach(calcSquare);
+arrNum.forEach(calcSquare); // can't provide new array
 
+// ---------------------------------------------------------------------------
+
+/*
+
+Some more array methods
+arr.map(callbackFnx(value, index, array))
+
+Creates a new array with the results of some operation. The value of its callback returns are used to form new array.
+Note -> The only difference between .forEach() and .map() is that .map() returns us a new array while .forEach() don't gives us new array.
+
+Example 
+let newArr = arr.map((val) => {
+    return val * 2;
+})
+
+*/
+
+// .map()
+let numb = [67, 52, 39];
+let newArr = numb.map((val) => {
+    return val * 2;
+})
+console.log(newArr);
+console.log(numb); // original array is still same
+
+/*
+
+arr.filter(callbackFnx(value, index, array))
+Creates a new array of elements that gives true for a condition/filter.
+Ex -> All even elements
+
+Example
+let newArr = arr.filter((val) => {
+    return val % 2 == 0;
+})
+
+*/
+let arrOfNum = [1, 2, 3, 4, 5, 6, 7, 8];
+let evenArray = arrOfNum.filter((val) => {
+    return val % 2 == 0;
+})
+console.log(evenArray); // gives new filtered array 
+
+// --------------------------------------------------------------------------
+
+/*
+
+.reduce() -> Performs some operations and reduces the array to a single value. It returns that value.
+
+Note -> accumulator refers to result or previousValue
+Example
+const arr = [1, 2, 3, 4];
+0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = arr.reduce((accumulator, currentValue) => {
+    accumulator + currentValue, initialValue
+});
+    console.log(sumWithInitial);
+    Expected Output: 10
+
+
+*/
+
+// Example -> Calculate sum
+let redArr = [1, 2, 3, 4];
+const output = redArr.reduce((res, curr) => {
+    return res + curr;
+});
+console.log(output);
+
+// Example -> Find largest element
+let arrElem = [6, 3, 1, 7, 2];
+const maxElem = arrElem.reduce((prev, curr) => {
+    return prev > curr ? prev : curr;
+});
+console.log(maxElem);
+
+// ------------------------------------------------------------------------------------------
+
+// Practice Question
+/*
+
+1. We are given an array of marks of students. Filter out the marks of students that scored 90+
+
+2. Take a number n as input from the user. Create an array of numbers from 1 to n.
+use the reduce method to calculate sum of all numbers in the array.
+Use the reduce method to calculate product of all numbers in the array.
+
+*/
+
+// 1. We are given an array of marks of students. Filter out the marks of students that scored 90+
+
+let marksOfStud = [75, 85, 68, 91, 93, 99, 88];
+let resMarks = marksOfStud.filter((val) => {
+    console.log(val);
+    return val > 90;
+})
+console.log(resMarks);
+
+// 2. Take a number n as input from the user. Create an array of numbers from 1 to n.
+// use the reduce method to calculate sum of all numbers in the array.
+// Use the reduce method to calculate product/factorial of all numbers in the array.
+
+let n = prompt("Enter the value of n ");
+let arrFromUser = [];
+for (let i = 1; i <= n; i++) {
+    arrFromUser[i - 1] = i; // 1(0), 2(1), 3(2), 4(3), 5(4)
+}
+console.log(arrFromUser);
+// calculate sum of all numbers in the array.
+let sumOfAllNum = arrFromUser.reduce((res, curr) => {
+    return res + curr;
+});
+console.log(sumOfAllNum);
+// calculate product/factorial of all numbers in the array
+
+let factorialOfAllNum = arrFromUser.reduce((res, curr) => {
+    return res * curr;
+});
+console.log(factorialOfAllNum);
