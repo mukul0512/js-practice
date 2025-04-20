@@ -1,0 +1,18 @@
+#toggleBtn {
+  margin: 21px;
+  padding: 18px;
+  height: 45px;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
