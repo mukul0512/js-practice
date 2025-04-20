@@ -36,3 +36,45 @@ btn.onClick = () => {
     console.log(a);
 }
 
+// Event Object
+/*
+
+* It is a special object that has details about the event.
+* All event handlers have access to the Event Object's and methods.
+Example
+node.event = (e) => {
+    handle here
+}
+
+e.target, e.type, e.clientX, e.clientY
+
+e.clientX -> means horizontally m kaha pr event occur hua.
+e.clientY -> means vertically m kaha pr event occur hua.
+
+Note -> e.clientX, e.clientY is used when we are building a game where position of screen is needed.
+
+*/
+
+// Example 1 onClick
+
+let btn1 = document.querySelector("#btn1");
+btn1.onClick = (e) => {
+    console.log(e); // here e is the event object
+    console.log(e.target); // here button element is the target
+    console.log(e.type); // here type is click
+    console.log(e.clientX); // means horizontally m kaha pr event occur hua.
+    console.log(e.clientY); // means vertically m kaha pr event occur hua.
+}
+
+// Example 2 onmouseover
+
+let div = document.querySelector("div");
+div.onmouseover = (e) => {
+    console.log("Mouse is hover");
+    console.log(e); // here e is the event object
+    console.log(e.target); // here div element is the target
+    console.log(e.type); // here type is hover
+    console.log(e.clientX); // means horizontally m kaha pr event occur hua.
+    console.log(e.clientY); // means vertically m kaha pr event occur hua.
+}
+
