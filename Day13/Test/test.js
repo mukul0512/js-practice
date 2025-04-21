@@ -40,7 +40,6 @@ for (let i = 0; i < str2.length; i++) {
     console.log(str2[i]);
     if (str2.charAt(i) === "o") {
         // str2[i] = "O";
-        str2.charAt(i) === "O";
         ans += "O";
     }
     else {
