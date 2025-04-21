@@ -134,17 +134,17 @@ for (let i = 0; i < 5; i++) {
 }
 
 // 3. return - Exits a function completely and optionally returns a value.
-// function findNumber() {
-//     for (let i = 0; i < 5; i++) {
-//         if (i === 3) {
-//             return "3";
-//         }
-//         console.log(i);
-//     }
-// }
+function findNumber() {
+    for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            return "3";
+        }
+        console.log(i);
+    }
+}
 
-// let result = findNumber();
-// console.log("Result:", result);
+let result = findNumber();
+console.log("Result:", result);
 
 // 4. How many types of loops - entry control vs exit control loop
 // Note - Only do ...while loop is the exit control loop and other are the entry control loop
@@ -152,37 +152,37 @@ for (let i = 0; i < 5; i++) {
 // 1. Entry control loop
 
 // 1. for loop
-// for (let i = 0; i < 5; i++) {
-//     console.log(i);
-//   }
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
 
 // 2. while loop
-// let i = 0;
-// while (i < 5) {
-//     console.log(i);
-//     i++;
-// }
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
 
 // 3. for ...of loop
-// const fruits = ["apple", "banana", "cherry"];
-// for (const fruit of fruits) {
-//     console.log(fruit);
-// }
+const fruits = ["apple", "banana", "cherry"];
+for (const fruit of fruits) {
+    console.log(fruit);
+}
 
 // 4. for ...in loop
-// const employee = { name: "Mukul", age: 25 };
-// for (const key in employee) {
-//     console.log(key, employee[key]);
-// }
+const employee = { name: "Mukul", age: 25 };
+for (const key in employee) {
+    console.log(key, employee[key]);
+}
 
 // 2. exit control loop
 
 // 1. do ...while loop
-// let i = 5;
-// do {
-//     console.log(i);
-//     i++;
-// } while (i < 5);
+let p = 5;
+do {
+    console.log(p);
+    p++;
+} while (p < 5);
 
 
 // --------------------------------------------------------------
