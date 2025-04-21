@@ -84,24 +84,9 @@ karanArjun4.calcTax2();
 
 // --------------------------------------------------------------------------------------------------------------------------
 
-// In case the tax rate for karanArjun object is high as their salary is more than employee method 
-// Example 1
-const student2 = { // direct way
-    fullname: "Mukul Karnwal",  // sate
-    marks: 94,                  // sate
-    printMarks2: function () {   // behavior
-        console.log("marks = ", this.marks); // here this.marks means student.marks
-    }
-};
-console.log(student2);
-console.log(student2.fullname);
-console.log(student2.marks);
-student2.printMarks2();
+// In case the tax rate for karanArjun object is high as their salary is more than employeeObj2 
 
-console.log(student2.printMarks2);
-console.log(student2.toString);
-
-// Example 2
+// Example 
 const employeeObj2 = {
     calcTax1() {             // another way of creating function inside an object
         console.log("tax rate is 10%");
@@ -113,51 +98,62 @@ const employeeObj2 = {
 
 const KaranArjun1 = {
     salary: 50000,
-    calcTax() {
+    calcTax() { // If object and prototype have same method, object's method will be used.
         console.log("tax rate is 40%");
 
     }
 }
 const KaranArjun2 = {
     salary: 50000,
-    calcTax() {
+    calcTax() { // If object and prototype have same method, object's method will be used.
         console.log("tax rate is 40%");
 
     }
 }
 const KaranArjun3 = {
     salary: 50000,
-    calcTax() {
+    calcTax() { // If object and prototype have same method, object's method will be used.
         console.log("tax rate is 40%");
 
     }
 }
 const KaranArjun4 = {
     salary: 50000,
-    calcTax() {
+    calcTax() { // If object and prototype have same method, object's method will be used.
         console.log("tax rate is 40%");
 
     }
 }
 
 console.log(KaranArjun1);
-KaranArjun1.__proto__ = employee; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
+KaranArjun1.__proto__ = employeeObj2; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
 console.log(KaranArjun1);
 
 console.log(KaranArjun2);
-KaranArjun2.__proto__ = employee; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
+KaranArjun2.__proto__ = employeeObj2; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
 console.log(KaranArjun2);
 
 console.log(KaranArjun3);
-KaranArjun3.__proto__ = employee; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
+KaranArjun3.__proto__ = employeeObj2; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
 console.log(KaranArjun3);
 
 console.log(KaranArjun4);
-KaranArjun4.__proto__ = employee; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
+KaranArjun4.__proto__ = employeeObj2; // by default every object have prototype (reference to an object). Here new function created i.e. calcTex1, calcTex2
 console.log(KaranArjun4);
 
 // now we can use
-KaranArjun1.calcTax(); // Employee 1 
-KaranArjun2.calcTax(); // Employee 2 
-KaranArjun3.calcTax(); // Employee 3
-KaranArjun4.calcTax(); // Employee 4
+KaranArjun1.calcTax(); // Employee 1 If object and prototype have same method, object's method will be used.
+// KaranArjun1.calcTax1();
+// KaranArjun1.calcTax2();
+
+KaranArjun2.calcTax(); // Employee 2 If object and prototype have same method, object's method will be used.
+// KaranArjun2.calcTax1();
+// KaranArjun2.calcTax2();
+
+KaranArjun3.calcTax(); // Employee 3 If object and prototype have same method, object's method will be used.
+// KaranArjun3.calcTax1();
+// KaranArjun3.calcTax2();
+
+KaranArjun4.calcTax(); // Employee 4 If object and prototype have same method, object's method will be used.
+// KaranArjun4.calcTax1();
+// KaranArjun4.calcTax2(); 
