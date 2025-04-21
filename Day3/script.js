@@ -47,7 +47,7 @@ for (let i = 0; i < 10; i++) {
     console.log(a);
 }
 console.log(name);
-console.log(y);
+// console.log(y);
 
 
 console.log(typeof null)
@@ -82,7 +82,7 @@ console.log(s(5));
 console.log(outside()(1));
 // -------------------------------------------------------------------------
 
-const multiply = (multiplier, ...bakiKaData) => {
+const multiply = (multiplier, ...bakiKaData) => { // rest operator
     console.log(bakiKaData);
 
     for (let i = 0; i < bakiKaData.length; i++) {
@@ -120,7 +120,7 @@ console.log("Outside function:", num);
 
 // call by reference
 function updatePerson(person) {
-    person.age = 25;
+    person.age = 26;
     console.log("Inside function:", person);
 }
 let user = { name: "Mukul", age: 25 };
