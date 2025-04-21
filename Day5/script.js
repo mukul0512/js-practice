@@ -41,16 +41,16 @@ console.log(generateRandomNumber(2));
 // ----------------------------------------------------------------
 
 // Recursion - Fibonacci
-function fibonacci(n) {
-    if (n <= 1) {
-        return n;
+function fibonacciSeries(numb1) {
+    if (numb1 <= 1) {
+        return numb1;
     }
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    return fibonacciSeries(numb1 - 1) + fibonacciSeries(numb1 - 2);
 }
 
 function printFibonacciSeries(count) {
     for (let i = 0; i < count; i++) {
-        console.log(fibonacci(i));
+        console.log(fibonacciSeries(i));
     }
 }
 printFibonacciSeries(7);
@@ -58,16 +58,16 @@ printFibonacciSeries(7);
 // ---------------------------------------------------------------------
 
 // Using loop
-function fibonacci(n) {
-    let a = 0, b = 1;
-    if (n === 0) return 0;
-    if (n === 1) return 1;
-    for (let i = 2; i <= n; i++) {
-        let temp = a + b;
-        a = b;
-        b = temp;
+function fibonacci(numb2) {
+    let x = 0, y = 1;
+    if (numb2 === 0) return 0;
+    if (numb2 === 1) return 1;
+    for (let i = 2; i <= numb2; i++) {
+        let temp = x + y;
+        x = y;
+        y = temp;
     }
-    return b;
+    return y;
 }
 function printFibonacciSeries(count) {
     for (let i = 0; i < count; i++) {
@@ -103,6 +103,7 @@ function Parent() {
 const y = Parent();
 y()
 
+// call by value
 const obj = {
     name: "ram",
     age: 25,
@@ -111,17 +112,15 @@ const obj = {
 const prop = "name";
 console.log(obj[prop])
 
-// call by value
-
 // call by reference
 function swap(a, b, arr) {
     let temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
 }
-const array = [1, 2];
-swap(0, 1, array);
-console.log(array[0] + " " + array[1])
+const arr = [1, 2];
+swap(0, 1, arr);
+console.log(arr[0] + " " + arr[1])
 
 // fibonacci series
 
@@ -143,36 +142,36 @@ console.log(array[0] + " " + array[1])
 // step 2 base case n <= 1 return n;
 // step 3 return fibonacci(n-1) + fibonacci(n-2)
 
-// function fibonacci(n){
-//     if(n <= 1) return n;
+function fibo(nu) {
+    if (nu <= 1) return nu;
 
-//     return fibonacci(n-1) + fibonacci(n-2);
-// }
-// for(let i=0;i<=5;i++){
-//     const x = fibonacci(i);
-//     console.log(x);
-// }
-// function printFibo(n){
-//     for(let i=0;i<n;i++){
-//         const x = fibonacci(i);
-//         // console.log(x);
-//     }
-// }
-// console.log(printFibo(5));
+    return fibo(nu - 1) + fibo(nu - 2);
+}
+for (let i = 0; i < 5; i++) {
+    const z = fibo(i);
+    console.log(z);
+}
+function printFibo(nu) {
+    for (let i = 0; i < nu; i++) {
+        const z = fibo(i);
+        console.log(z);
+    }
+}
+console.log(printFibo(5));
 
 // Understand variable scope: global scope, function scope, and block scope.
 
-// let name = "Ram"; // global scope
-// function Outer() {
-//     let name = "Sita";
-//     // heavy computaion
-//     function Inner() {
-//         console.log(name);
-//     }
-//     return Inner;
-// }
-// const printName = Outer();
-// printName();
+let name1 = "Ram"; // global scope
+function Outer() {
+    let name1 = "Sita";
+    // heavy computaion
+    function Inner() {
+        console.log(name1);
+    }
+    return Inner;
+}
+const printName2 = Outer();
+// printName2();
 
 // ----------------------------------------------------------------------------
 function createMultiplier(multiplier) {
@@ -242,16 +241,16 @@ for (let i = 1; i <= 10; i++) {
 // ------------------------------------------------------------------
 
 // Check Palindrome ex num = 121
-// const reverseNumber = (n, rev = 0) => {
-//     if (n === 0) return rev;
-//     return reverseNumber(Math.floor(n / 10), rev * 10 + (n % 10));
-// };
-// const IsPalindrome = (n) => {
-//     const reversed = reverseNumber(n);
-//     return n === reversed;
-// };
-// const num = 121;
-// console.log(`${num} is palindrome`, IsPalindrome(num));
+const reverseNumb = (n, rev = 0) => {
+    if (n === 0) return rev;
+    return reverseNumb(Math.floor(n / 10), rev * 10 + (n % 10));
+};
+const IsPalind = (n) => {
+    const reversed = reverseNumb(n);
+    return n === reversed;
+};
+const num1 = 121;
+console.log(`${num1} is palindrome?`, IsPalind(num1));
 
 // --------------------------------------------------------------------------
 
@@ -283,25 +282,11 @@ console.log(Math.floor(1 / 10));
 console.log(`${num} is palindrome`, IsPalindrome(num));
 
 
-// ----------------------------------------------------------------------------------------
-
-// let name = "Ram"; // global scope
-// function Outer() {
-//     let name = "Sita";
-//     // heavy computaion
-//     function Inner() {
-//         console.log(name);
-//     }
-//     return Inner;
-// }
-// const printName = Outer();
-// printName();
-
 // ------------------------------------------------------------------
 
 let name = "Ram"; // global scope
 function Outer() {
-    // let name = "Sita";
+    let name = "Sita";
     // heavy computaion
     function Inner() {
         console.log(name);
@@ -320,10 +305,13 @@ Rest Operator - Used in function parameters to collect remaining arguments into 
 */
 // Example of rest operator
 function sum(...numbers) {
+    console.log(numbers);
     return numbers.reduce((acc, num) => acc + num, 0);
 }
 
-sum(1, 2, 3, 4);
+const final = sum(1, 2, 3, 4);
+console.log(final);
+
 
 // ---------------------------------------------------------------------------------
 
@@ -334,9 +322,11 @@ Spread Operator - Used to expand an iterable (like an array or object) into indi
 // Example of Spread Operator
 const arr1 = [1, 2, 3];
 const arr2 = [...arr1, 4, 5];
+console.log(arr2);
 
-const ob1 = { a: 1, b: 2 };
-const ob2 = { ...ob1, c: 3 };
+const objec1 = { a3: 1, b3: 2 };
+const objec2 = { ...objec1, c3: 3 };
+console.log(objec2);
 
 // --------------------------------------------------------------------------------------
 
