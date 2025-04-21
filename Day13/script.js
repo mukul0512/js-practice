@@ -201,18 +201,19 @@ promise.then((res) => {
 finalPromise.catch((err) => {
     console.log("rejected", err);
 })
-
+// ------------------------------------------------------------------------------------------------
 // function getNewDataFromDatabase(dataId, getNextData) { // assume it takes 2 sec to search dataId from the database
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log("data", dataId);
-//             resolve("success");
-//             if (getNewDataFromDatabase) {
-//                 getNewDataFromDatabase();
-//             }
-//         }, 5000);
-//     });
-// }
+function getNewDataFromDatabase(dataId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataId);
+            resolve("success");
+            // if (getNextData) {
+            //     getNextData();
+            // }
+        }, 2000);
+    });
+}
 
 // let receivedPromise = getNewDataFromDatabase(123);
 // console.log(receivedPromise);
@@ -223,9 +224,31 @@ finalPromise.catch((err) => {
 
 * Promise Chain
 
-
 */
 
+// Example of promise chain on callback hell problem example
+// let p1 = getNewDataFromDatabase(1);
+// getNewDataFromDatabase(1).then((res) => { // 3sec data 1 came
+//     console.log(res);
+//     getNewDataFromDatabase(2).then(() => { // 3sec data 2 came
+//         console.log(res);
+//     })
+// })
+// Actual way is to just return data that we received
+getNewDataFromDatabase(1).then((res) => { // 3sec data 1 came
+    console.log(res);
+    return getNewDataFromDatabase(2);  // 3sec data 2 came
+}).then((res) => {
+    console.log(res);
+    return getNewDataFromDatabase(3); // 3sec data 3 came
+}).then((res) => {
+    console.log(res);
+})
+
+
+
+// ---------------------------------------------------------------------------------------------------------
+// Promise Chain Example
 function asyncFunc1() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -276,3 +299,6 @@ asyncFunc1().then((res) => {
         console.log(res);
     });
 });
+
+// -------------------------------------------------------------------------------------------------------
+
