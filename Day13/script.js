@@ -162,7 +162,7 @@ function getNewData(dataId, getNextData) { // assume it takes 2 sec to search da
         setTimeout(() => {
             console.log("data", dataId); // in case err: 
             resolve("success");
-            reject("error");
+            // reject("error");
             if (getNewData) {
                 getNewData();
             }
