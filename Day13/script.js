@@ -104,10 +104,13 @@ function getData(dataId, getNextData) { // assume it takes 2 sec to search dataI
     // console.log("data", dataId);
     setTimeout(() => {
         console.log("data", dataId);
+        if (getNextData) {
+            getNextData();
+        }
     }, 2000);
 }
 
-// getData(2, getNextData) // 2s
+// getData(2, getNextData) // 2s 
 // getData(3, getNextData) // 2s
 // getData(4, getNextData) // 2s
 
@@ -119,15 +122,15 @@ function getData(dataId, getNextData) { // assume it takes 2 sec to search dataI
 
 // Example of nesting callback known as Callback Hell (Pyramid of Doom)
 getData(1, () => { // 2s here data 1 is came and getting of data 2 through callback
-    console.log("getting data2 ...");
-    getNextData(2, () => { // 2s callback
-        console.log("getting data3 ...");
+    // console.log("getting data2 ...");
+    getData(2, () => { // 2s callback
+        // console.log("getting data3 ...");
         getData(3, () => { // 2s callback
-            console.log("getting data4 ...");
+            // console.log("getting data4 ...");
             getData(4);
         });
-    })
-})
+    });
+});
 
 // --------------------------------------------------------------------------------------------------
 
