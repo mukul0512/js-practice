@@ -160,8 +160,8 @@ let promise = new Promise((resolve, reject) => {...}) // function with 2 handler
 function getNewData(dataId, getNextData) { // assume it takes 2 sec to search dataId from the database
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            // console.log("data", dataId); // in case err: 
-            // resolve("success");
+            console.log("data", dataId); // in case err: 
+            resolve("success");
             reject("error");
             if (getNewData) {
                 getNewData();
