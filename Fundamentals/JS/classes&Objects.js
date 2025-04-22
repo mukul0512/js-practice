@@ -156,4 +156,20 @@ KaranArjun3.calcTax(); // Employee 3 If object and prototype have same method, o
 
 KaranArjun4.calcTax(); // Employee 4 If object and prototype have same method, object's method will be used.
 // KaranArjun4.calcTax1();
-// KaranArjun4.calcTax2(); 
+// KaranArjun4.calcTax2();
+
+// ---------------------------------------------------------------------------------------------------------------
+/*
+* Classes in JS
+* class is a program-code template for creating objects.
+* Those objects will have some state (variables) & some behavior (functions) inside it.
+* Example
+  class MyClass {
+    constructor() {...}
+    myMethod() {...}
+}
+  
+  let myObj = new MyClass();
+
+*/
+
