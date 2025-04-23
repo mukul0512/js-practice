@@ -1,23 +1,23 @@
-doManualLogin: async (params: any): Promise<APIResponseModal> => {
-    return new Promise((resolve, reject) => {
-        ApiService.postApi(ENDPOINTS.AUTH.LOGIN, params)
-            .then((res: any) => {
-                console.log("Login response :", res);
-                if (res?.data) {
-                    resolve({
-                        isSuccess: true,
-                        data: res.data,
-                        message: res.message,
-                    });
-                }
-                reject({ ...res, isSuccess: false });
-            })
-            .catch((err) => {
-                console.log("error in login api call", err);
-                reject({ ...err, isSuccess: false });
-            });
-    });
-},
+// doManualLogin: async (params: any): Promise<APIResponseModal> => {
+//     return new Promise((resolve, reject) => {
+//         ApiService.postApi(ENDPOINTS.AUTH.LOGIN, params)
+//             .then((res: any) => {
+//                 console.log("Login response :", res);
+//                 if (res?.data) {
+//                     resolve({
+//                         isSuccess: true,
+//                         data: res.data,
+//                         message: res.message,
+//                     });
+//                 }
+//                 reject({ ...res, isSuccess: false });
+//             })
+//             .catch((err) => {
+//                 console.log("error in login api call", err);
+//                 reject({ ...err, isSuccess: false });
+//             });
+//     });
+// },
 /**
  * function fetchData(callback) {
   setTimeout(() => {
@@ -76,15 +76,15 @@ getData();
  */
 
 const user = {
-    name: "Ram",
+  name: "Ram",
 };
 const user2 = {
-    name: "Ram",
+  name: "Ram",
 };
 const user3 = user;
 // console.log(this);
 function fun() {
-    console.log(this);
+  console.log(this);
 }
 // fun();
 // console.log(module);
@@ -133,9 +133,9 @@ const a = [10, 20, 30, 40, 50];
 // a.map()
 
 const x = a.forEach((value, index, arr) => {
-    // console.log(value);
-    // console.log(index)
-    // console.log(arr);
-    return true;
+  // console.log(value);
+  // console.log(index)
+  // console.log(arr);
+  return true;
 })
 // console.log(x);
