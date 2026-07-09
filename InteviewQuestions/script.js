@@ -22,6 +22,9 @@ const calculate = function (radius, logic) {
   return output;
 }
 
-console.log("Area of 4 circles:", calculate(radius, area));
-console.log("Circumferences of 4 circles:", calculate(radius, circumference));
-console.log("Diameters of 4 circles:", calculate(radius, diameter));
+console.log(radius.map(area));
+console.log(radius.map(circumference));
+console.log(radius.map(diameter));
+// console.log("Area of 4 circles:", calculate(radius, area));
+// console.log("Circumferences of 4 circles:", calculate(radius, circumference));
+// console.log("Diameters of 4 circles:", calculate(radius, diameter));
